@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#dddddd;display:block;z-index:1;position:relative" width="3000" height="2000" preserveAspectRatio="xMidYMid" viewBox="0 0 3000 2000">
+<g><linearGradient id="wavebg" x1="0" x2="0.5" y1="0" y2="0" gradientUnits="objectBoundingBox">
+  <stop stop-color="#ffffff" offset="0"></stop>
+  <stop stop-color="#999" offset="1"></stop>
+</linearGradient><path d="M -1428.72 2000 Q -1357.54 1542.61 -1211.97 1087.63 T -582.912 264.575 T 396.862 -388.608 T 1631.45 -807.977 T 3000 -952.482 T 4368.55 -807.977 T 5603.14 -388.608 T 6582.91 264.575 T 7211.97 1087.63 T 7428.72 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M -985.85 2000 Q -891.371 1539.93 -745.474 1091.17 T -53.3384 291.963 T 1007.07 -301.232 T 2307.86 -616.864 T 3692.14 -616.864 T 4992.93 -301.232 T 6053.34 291.963 T 6745.47 1091.17 T 6985.85 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M -542.978 2000 Q -427.006 1543.77 -273.285 1096.11 T 494.736 329.824 T 1644.16 -182.19 T 3000 -361.985 T 4355.84 -182.19 T 5505.26 329.824 T 6273.28 1096.11 T 6542.98 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M -100.106 2000 Q 8.93607 1541.63 206.901 1103.28 T 1067.12 384.16 T 2310.16 -14.9197 T 3689.84 -14.9197 T 4932.88 384.16 T 5793.1 1103.28 T 6100.11 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M 342.767 2000 Q 473.305 1548.7 698.768 1114.26 T 1671.38 465.846 T 3000 228.511 T 4328.62 465.846 T 5301.23 1114.26 T 5657.23 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M 785.639 2000 Q 909.083 1547.05 1208.54 1132.29 T 2315.72 596.012 T 3684.28 596.012 T 4791.46 1132.29 T 5214.36 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M 1228.51 2000 Q 1380.88 1557.85 1747.37 1164.91 T 3000 819.007 T 4252.63 1164.91 T 4771.49 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M 1671.38 2000 Q 1880.44 1568.62 2335.69 1232.92 T 3664.31 1232.92 T 4328.62 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M 2114.26 2000 Q 2382.43 1597.83 3000 1409.5 T 3885.74 2000" fill="url(#wavebg)" opacity="0.9">
+</path><path d="M 2557.13 2000 Q 3000 1733.02 3442.87 2000" fill="url(#wavebg)" opacity="0.9">
+</path></g><style> #wavebg { opacity: 0; } #wavebg ~ path { opacity: .35; } </style>
+</svg>
