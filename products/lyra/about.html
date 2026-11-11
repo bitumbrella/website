@@ -13,6 +13,259 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+    <style>
+        :root {
+            --ink: #131e1d;
+            --accent: #d05f01;
+            --muted: #5b6766;
+            --line: #e3e7e6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--ink);
+            background: #f6f7f7;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--ink);
+            color: #f5f5f5;
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        header img {
+            height: 36px;
+        }
+
+        header a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 32px 0 48px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 4px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin: 34px 0 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--line);
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 18px 0 4px;
+        }
+
+        p,
+        li {
+            font-size: 0.97rem;
+        }
+
+        ul {
+            padding-left: 1.2em;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .summary {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 0.92rem;
+            background: #fff;
+        }
+
+        th,
+        td {
+            text-align: left;
+            vertical-align: top;
+            padding: 9px 10px;
+            border: 1px solid var(--line);
+        }
+
+        th {
+            background: #eef1f0;
+        }
+
+        footer {
+            color: var(--muted);
+            font-size: 0.85rem;
+            padding-bottom: 32px;
+        }
+
+        /* About page */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            padding: 12px 0 8px;
+        }
+
+        .hero img {
+            width: 112px;
+            height: 112px;
+            border-radius: 26px;
+            box-shadow: 0 6px 20px rgba(19, 30, 29, 0.18);
+            flex-shrink: 0;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 1.15rem;
+            margin: 6px 0 0;
+            color: var(--muted);
+        }
+
+        .lead {
+            font-size: 1.08rem;
+            margin-top: 22px;
+        }
+
+        .feature {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-top: 22px;
+        }
+
+        .feature h2 {
+            border-top: 0;
+            margin: 0 0 6px;
+            padding-top: 0;
+        }
+
+        .feature .kicker {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0 4px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .examples li {
+            background: #eef1f0;
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
+
+        .grid div {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 0.93rem;
+        }
+
+        .grid strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .cta {
+            background: var(--ink);
+            color: #f5f5f5;
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-top: 34px;
+        }
+
+        .cta h2 {
+            border-top: 0;
+            margin: 0 0 6px;
+            padding-top: 0;
+            color: #fff;
+        }
+
+        .cta a {
+            color: #ffb36b;
+        }
+
+        footer a {
+            color: var(--muted);
+        }
+
+        @media (max-width: 560px) {
+            .hero {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,8 +280,10 @@
                     <div class="bu-navigationWrap">
                         <nav class="bu-navigation">
                             <a class="bu-navigation-link bu-navigation-link--home" href="../../index.html">Home</a>
-                            <a class="bu-navigation-link bu-navigation-link--doctrine" href="../../index.html#doctrine">Doctrine</a>
-                            <a class="bu-navigation-link bu-navigation-link--services" href="../../index.html#services">Services</a>
+                            <a class="bu-navigation-link bu-navigation-link--doctrine"
+                                href="../../index.html#doctrine">Doctrine</a>
+                            <a class="bu-navigation-link bu-navigation-link--services"
+                                href="../../index.html#services">Services</a>
                             <a class="bu-navigation-link bu-navigation-link--leadership"
                                 href="../../index.html#leadership">Leadership</a>
                             <div class="bu-navigation-dropdown">
@@ -41,15 +296,20 @@
                                             aria-expanded="false" aria-controls="lyraMenu">Lyra<span
                                                 class="bu-navigation-caret" aria-hidden="true"></span></button>
                                         <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="lyraMenu">
-                                            <a class="bu-navigation-sublink" href="about.html" aria-current="page">About</a>
-                                            <a class="bu-navigation-sublink" href="privacy-policy.html">Privacy Policy</a>
-                                            <a class="bu-navigation-sublink" href="terms-of-service.html">Terms of Service</a>
-                                            <a class="bu-navigation-sublink" href="delete-my-data.html">Delete My Data</a>
+                                            <a class="bu-navigation-sublink" href="about.html"
+                                                aria-current="page">About</a>
+                                            <a class="bu-navigation-sublink" href="privacy-policy.html">Privacy
+                                                Policy</a>
+                                            <a class="bu-navigation-sublink" href="terms-of-service.html">Terms of
+                                                Service</a>
+                                            <a class="bu-navigation-sublink" href="delete-my-data.html">Delete My
+                                                Data</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <a class="bu-navigation-link bu-navigation-link--contactUs" href="../../index.html#contactUs">Contact Us</a>
+                            <a class="bu-navigation-link bu-navigation-link--contactUs"
+                                href="../../index.html#contactUs">Contact Us</a>
                         </nav>
                         <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
                             <svg class="bu-navigation-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -65,12 +325,128 @@
             <section class="bu-page">
                 <div class="buu-wrap">
                     <article class="bu-page-content">
-                        <h2 class="bu-section-header bu-section-header--hr">About Lyra</h2>
-                        <p class="buu-paragraph">Lyra is a product built by Bit Umbrella. <!-- TODO: Replace with a description of Lyra: what it does, who it is for, and why it exists. --></p>
-                        <h3>What Lyra does</h3>
-                        <p class="buu-paragraph"><!-- TODO --> Describe Lyra's core features here.</p>
-                        <h3>Get in touch</h3>
-                        <p class="buu-paragraph">Questions or feedback? Reach us at <a href="mailto:vishalbhatia@bitumbrella.tech">vishalbhatia@bitumbrella.tech</a>.</p>
+                        <main class="wrap">
+                            <div class="hero">
+                                <img src="../../img/lyra-icon.png" alt="Lyra app icon">
+                                <div>
+                                    <h1>Lyra</h1>
+                                    <p class="tagline">Your photos and documents, finally easy to find.</p>
+                                </div>
+                            </div>
+
+                            <p class="lead">
+                                Photos pile up, and important documents get lost in folders and inboxes. Lyra is a smart
+                                library for both.
+                                Add a photo or a document once, and Lyra reads it, describes it and remembers it - so
+                                later you can find
+                                it, or simply ask about it, in your own words.
+                            </p>
+
+                            <section class="feature">
+                                <p class="kicker">Smart photo library</p>
+                                <h2>Photos that know what's in them</h2>
+                                <p>
+                                    Every photo you add to Lyra becomes an <strong>Asset</strong> with real context
+                                    around it. Lyra
+                                    describes what's in the picture, tags it, notes its main colours, reads any text in
+                                    it, and - if you
+                                    allow it - remembers where you took it. Add your own notes, or record a quick voice
+                                    note and Lyra
+                                    writes it down for you.
+                                </p>
+                                <p>
+                                    Group up to 20 photos in one Asset - the front and back of a warranty card, every
+                                    angle of something
+                                    you're selling - and keep them on your phone as well as safely in the cloud.
+                                </p>
+                            </section>
+
+                            <section class="feature">
+                                <p class="kicker">Smart document library</p>
+                                <h2>Upload a document once. Find anything in it in seconds.</h2>
+                                <p>
+                                    Add PDFs, Word and Excel files - insurance policies, receipts, bills, contracts,
+                                    statements. Lyra
+                                    reads every page, works out what kind of document it is, and picks out the details
+                                    that matter, such
+                                    as policy numbers, dates and amounts. Even a scanned PDF or a photo of a paper
+                                    document is read.
+                                </p>
+                                <p>
+                                    No more opening file after file to find one number: search or ask, and Lyra takes
+                                    you straight to
+                                    the right document, with the original one tap away.
+                                </p>
+                            </section>
+
+                            <section class="feature">
+                                <p class="kicker">Ask Lyra</p>
+                                <h2>Ask a question. Get the answer, not a list of files.</h2>
+                                <p>
+                                    Type or simply hold the mic and ask. Lyra answers instantly, using only what's in
+                                    your own library -
+                                    and only what's relevant to your question - and can read the answer aloud. Under
+                                    every answer you see
+                                    the Assets it came from, so the original photo or document is always one tap away to
+                                    check.
+                                </p>
+                                <ul class="examples">
+                                    <li>When does my car insurance expire?</li>
+                                    <li>What's the policy number on my health insurance?</li>
+                                    <li>How much did I pay for the fridge?</li>
+                                    <li>Where did I park at the airport?</li>
+                                </ul>
+                            </section>
+
+                            <section class="feature">
+                                <p class="kicker">Smart search</p>
+                                <h2>Describe it the way you remember it</h2>
+                                <p>
+                                    You don't need the exact words. Describe what you're looking for in a full sentence,
+                                    and Lyra
+                                    understands what you mean - not just the words you typed. Prefer keywords? Those
+                                    work too, and you
+                                    can narrow results by tag, colour or place.
+                                </p>
+                                <ul class="examples">
+                                    <li>the blue jacket I bought last winter</li>
+                                    <li>receipt for the new laptop</li>
+                                    <li>handwritten recipe from grandma</li>
+                                    <li>passport</li>
+                                </ul>
+                                <p>
+                                    Or just point your camera: <strong>Scan</strong> a thing in front of you and Lyra
+                                    finds it in your
+                                    library.
+                                </p>
+                            </section>
+
+                            <h2>Built around your privacy</h2>
+                            <div class="grid">
+                                <div><strong>Your data stays yours</strong>No ads, no trackers, and we never sell your
+                                    information or
+                                    use it to train AI.</div>
+                                <div><strong>You choose the region</strong>Keep your library stored in Asia or in the
+                                    rest of the world.
+                                </div>
+                                <div><strong>Private by default</strong>Only you can see your Assets. Location is
+                                    removed from photo files
+                                    before they're stored.</div>
+                                <div><strong>Delete anytime</strong>Remove one Asset, or everything, whenever you like -
+                                    right from the
+                                    app.</div>
+                            </div>
+                            <p class="muted">Read the details in our <a href="privacy.html">privacy policy</a>.</p>
+
+                            <div class="cta">
+                                <h2>Get Lyra</h2>
+                                <p style="margin:0">
+                                    Lyra is coming soon to Google Play for Android. Start free - no card needed.
+                                    Questions or feedback? Write to us at
+                                    <a href="mailto:reachus@bitumbrella.tech?subject=Lyra">reachus@bitumbrella.tech</a>.
+                                </p>
+                            </div>
+                        </main>
                     </article>
                 </div>
             </section>
