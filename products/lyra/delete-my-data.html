@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Delete My Lyra Data - Bit Umbrella">
+    <link rel="stylesheet" href="../../css/bitumbrella.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#131e1d">
+    <title>Delete My Lyra Data - Bit Umbrella</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <style>
+        :root {
+            --ink: #131e1d;
+            --accent: #d05f01;
+            --muted: #5b6766;
+            --line: #e3e7e6;
+            --danger: #b3261e;
+            --ok: #1e7b45;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--ink);
+            background: #f6f7f7;
+            line-height: 1.55;
+        }
+
+        header {
+            background: var(--ink);
+            color: #f5f5f5;
+        }
+
+        .wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        header img {
+            height: 36px;
+        }
+
+        header a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 32px 0 48px;
+        }
+
+        h1 {
+            font-size: 1.7rem;
+            margin: 0 0 6px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            margin: 28px 0 8px;
+        }
+
+        .lede {
+            color: var(--muted);
+            margin-top: 0;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px;
+            margin-top: 22px;
+        }
+
+        ul {
+            padding-left: 1.2em;
+            margin: 6px 0;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        input[type=text] {
+            font: inherit;
+            padding: 10px 12px;
+            border: 1px solid #b9c2c1;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 260px;
+        }
+
+        button.danger {
+            font: inherit;
+            font-weight: 700;
+            color: #fff;
+            background: var(--danger);
+            border: 0;
+            border-radius: 8px;
+            padding: 11px 18px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button.danger:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        button.link {
+            font: inherit;
+            background: none;
+            border: 0;
+            color: var(--accent);
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .result {
+            margin-top: 14px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            background: #f2f4f4;
+        }
+
+        .result.ok {
+            background: #e8f5ed;
+            color: var(--ok);
+        }
+
+        .result.err {
+            background: #fbeceb;
+            color: var(--danger);
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        footer {
+            color: var(--muted);
+            font-size: 0.85rem;
+            padding-bottom: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bu">
+        <header class="bu-header bu-header--solid">
+            <div class="buu-wrap buu-wrap--header">
+                <div class="bu-header-inner">
+                    <a class="bu-logoBlock" href="../../index.html">
+                        <img src="../../img/UmbrellaLogo.svg" alt="Bit Umbrella Logo" class="bu-logoBlock-logo">
+                    </a>
+                    <h1 class="bu-header-name">Bit Umbrella</h1>
+                    <div class="bu-navigationWrap">
+                        <nav class="bu-navigation">
+                            <a class="bu-navigation-link bu-navigation-link--home" href="../../index.html">Home</a>
+                            <a class="bu-navigation-link bu-navigation-link--doctrine"
+                                href="../../index.html#doctrine">Doctrine</a>
+                            <a class="bu-navigation-link bu-navigation-link--services"
+                                href="../../index.html#services">Services</a>
+                            <a class="bu-navigation-link bu-navigation-link--leadership"
+                                href="../../index.html#leadership">Leadership</a>
+                            <div class="bu-navigation-dropdown">
+                                <button class="buu-button bu-navigation-link bu-navigation-dropdownToggle"
+                                    aria-expanded="false" aria-controls="productsMenu">Products<span
+                                        class="bu-navigation-caret" aria-hidden="true"></span></button>
+                                <div class="bu-navigation-submenu bu-navigation-submenu--top" id="productsMenu">
+                                    <div class="bu-navigation-dropdown">
+                                        <button class="buu-button bu-navigation-subToggle bu-navigation-dropdownToggle"
+                                            aria-expanded="false" aria-controls="lyraMenu">Lyra<span
+                                                class="bu-navigation-caret" aria-hidden="true"></span></button>
+                                        <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="lyraMenu">
+                                            <a class="bu-navigation-sublink" href="about.html">About</a>
+                                            <a class="bu-navigation-sublink" href="privacy-policy.html">Privacy
+                                                Policy</a>
+                                            <a class="bu-navigation-sublink" href="terms-of-service.html">Terms of
+                                                Service</a>
+                                            <a class="bu-navigation-sublink" href="delete-my-data.html"
+                                                aria-current="page">Delete My Data</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="bu-navigation-link bu-navigation-link--contactUs"
+                                href="../../index.html#contactUs">Contact Us</a>
+                        </nav>
+                        <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
+                            <svg class="bu-navigation-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="bu-main">
+            <section class="bu-page">
+                <div class="buu-wrap">
+                    <article class="bu-page-content">
+                        <main class="wrap">
+                            <h1>Delete your data</h1>
+                            <p class="lede">Use this page to permanently delete
+                                everything Lyra stores about you - no app needed.</p>
+
+                            <div class="card">
+                                <h2 style="margin-top:0">What gets deleted</h2>
+                                <ul>
+                                    <li>All your Assets, with their notes, voice-note transcriptions, tags, colours,
+                                        extracted text and locations</li>
+                                    <li>Their photos, documents and voice notes stored in the cloud</li>
+                                    <li>Lyra answers you've reported to us (they include your question)</li>
+                                </ul>
+                                <p class="muted">Deletion is immediate and covers every Lyra server (Asia and rest of
+                                    the world). It can't be undone.</p>
+
+                                <h2>What's kept</h2>
+                                <ul>
+                                    <li>Feedback you've sent us, with your email address removed</li>
+                                    <!-- CONFIRM: match your actual log retention before publishing. -->
+                                    <li>Server logs, which may include your email address, until they're deleted under
+                                        our routine log retention</li>
+                                </ul>
+                                <p class="muted">
+                                    Lyra doesn't create an account - you sign in with Google, and your Google account
+                                    isn't affected.
+                                    Photos in your phone's gallery aren't touched. Data kept on your phone by the Lyra
+                                    app is removed when you
+                                    use "Delete my data" in the app, clear the app's data, or uninstall it.
+                                </p>
+                            </div>
+
+                            <div class="card">
+                                <h2 style="margin-top:0">Delete my data</h2>
+
+                                <section id="signInStep">
+                                    <p>Sign in with the Google account you use in Lyra.</p>
+                                    <div id="googleButton"></div>
+                                    <p id="signInError" class="result err" hidden></p>
+                                </section>
+
+                                <section id="confirmStep" hidden>
+                                    <p>Signed in as <strong id="whoAmI"></strong>. <button class="link"
+                                            id="switchAccount" type="button">Not you?</button></p>
+                                    <label for="confirmText">This can't be undone. Type <strong>DELETE</strong> to
+                                        confirm:</label><br>
+                                    <input type="text" id="confirmText" autocomplete="off" placeholder="DELETE"><br>
+                                    <button class="danger" id="deleteButton" type="button" disabled>Delete
+                                        everything</button>
+                                </section>
+
+                                <section id="resultStep" hidden>
+                                    <div id="results"></div>
+                                </section>
+                            </div>
+
+                            <p class="muted" style="margin-top:22px">
+                                Can't sign in? Email <a
+                                    href="mailto:reachus@bitumbrella.tech?subject=Lyra%20data%20deletion%20request">reachus@bitumbrella.tech</a>
+                                from the email address you use in Lyra, and we'll help delete your data.
+                            </p>
+                        </main>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="bu-footer">
+            <div class="bu-footer-inner">
+                ©2020 Bit Umbrella. Designed by <a href="mailto:miller.pb@gmail.com">Paul Miller</a>.
+            </div>
+        </footer>
+    </div>
+    <script src="../../js/behavior.js"></script>
+    <script>
+        // The Google OAuth web client the Lyra APIs validate tokens against (Authentication:Google:ClientId).
+        const GOOGLE_CLIENT_ID = '886999195054-bnmsmjmdjlrbbf761i36f0lhmeocu2m4.apps.googleusercontent.com';
+
+        // Every Lyra server - a user's data lives on one, but deleting on all is safe (the endpoint is
+        // idempotent) and clears anything left from before regions were per user.
+        const SERVERS = [
+            { label: 'Asia', url: 'https://api.lyraapp.in' },
+            { label: 'Rest of the world', url: 'https://api.lyraapp.xyz' },
+        ];
+
+        let idToken = null;
+
+        const $ = id => document.getElementById(id);
+        const show = (id, visible) => { $(id).hidden = !visible; };
+
+        // Display only - the API verifies the token's signature itself.
+        function emailFromToken(token) {
+            const payload = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+            return JSON.parse(decodeURIComponent(escape(atob(payload)))).email;
+        }
+
+        function onCredential(response) {
+            idToken = response.credential;
+            $('whoAmI').textContent = emailFromToken(idToken);
+            $('confirmText').value = '';
+            $('deleteButton').disabled = true;
+            show('signInStep', false);
+            show('resultStep', false);
+            show('confirmStep', true);
+        }
+
+        function resetToSignIn(message) {
+            idToken = null;
+            show('confirmStep', false);
+            show('resultStep', false);
+            show('signInStep', true);
+            $('signInError').textContent = message || '';
+            show('signInError', Boolean(message));
+        }
+
+        async function deleteOn(server) {
+            try {
+                const response = await fetch(server.url + '/api/user/data', {
+                    method: 'DELETE',
+                    headers: { Authorization: 'Bearer ' + idToken },
+                });
+
+                if (response.status === 401) return { server, expired: true };
+                if (!response.ok) return { server, error: 'HTTP ' + response.status };
+
+                return { server, result: await response.json() };
+            } catch (e) {
+                return { server, error: "couldn't reach the server" };
+            }
+        }
+
+        async function deleteEverywhere() {
+            $('deleteButton').disabled = true;
+            $('deleteButton').textContent = 'Deleting…';
+
+            const outcomes = await Promise.all(SERVERS.map(deleteOn));
+
+            if (outcomes.some(o => o.expired)) {
+                $('deleteButton').textContent = 'Delete everything';
+                resetToSignIn('Your sign-in expired. Please sign in again and retry.');
+                return;
+            }
+
+            const failed = outcomes.filter(o => o.error);
+            const totalAssets = outcomes.reduce((sum, o) => sum + (o.result ? o.result.assetsDeleted : 0), 0);
+
+            const results = $('results');
+            results.innerHTML = '';
+
+            const summary = document.createElement('div');
+            summary.className = 'result ' + (failed.length ? 'err' : 'ok');
+            summary.textContent = failed.length
+                ? "Some of your data couldn't be deleted yet: " + failed.map(o => o.server.label + ' (' + o.error + ')').join(', ') +
+                '. Please try again - it\'s safe to repeat.'
+                : 'Done. Your Lyra data has been deleted (' + totalAssets + ' Asset' + (totalAssets === 1 ? '' : 's') + ').';
+            results.appendChild(summary);
+
+            show('confirmStep', Boolean(failed.length));
+            show('resultStep', true);
+            $('deleteButton').textContent = 'Try again';
+            $('deleteButton').disabled = !failed.length;
+        }
+
+        window.addEventListener('load', () => {
+            google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: onCredential });
+            google.accounts.id.renderButton($('googleButton'), { theme: 'outline', size: 'large', text: 'signin_with' });
+
+            $('confirmText').addEventListener('input', e => {
+                $('deleteButton').disabled = e.target.value.trim() !== 'DELETE';
+            });
+            $('deleteButton').addEventListener('click', deleteEverywhere);
+            $('switchAccount').addEventListener('click', () => {
+                google.accounts.id.disableAutoSelect();
+                resetToSignIn();
+            });
+        });
+    </script>
+</body>
+
+</html>

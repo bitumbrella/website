@@ -908,3 +908,175 @@ $hrWidth: 6rem;
         left: 0;
     }
 }
+// Products dropdown navigation
+
+.bu-navigation
+{
+    overflow-y: auto;
+}
+
+.bu-navigation-dropdownToggle
+{
+    text-align: right;
+    text-shadow: none;
+    width: 100%;
+}
+
+.bu-navigation-caret
+{
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    display: inline-block;
+    height: .4rem;
+    margin: 0 .1rem .2rem .6rem;
+    transform: rotate(45deg);
+    transition: transform 200ms;
+    vertical-align: middle;
+    width: .4rem;
+}
+
+.bu-navigation-dropdown--open > .bu-navigation-dropdownToggle .bu-navigation-caret
+{
+    margin-bottom: -.1rem;
+    transform: rotate(225deg);
+}
+
+.bu-navigation-submenu
+{
+    display: none;
+}
+
+.bu-navigation-dropdown--open > .bu-navigation-submenu
+{
+    display: block;
+}
+
+.bu-navigation-subToggle,
+.bu-navigation-sublink
+{
+    color: $black;
+    display: block;
+    font-size: .95rem;
+    padding: .75rem 2rem;
+    text-align: right;
+    text-decoration: none;
+    text-shadow: none;
+    width: 100%;
+
+    &:hover,
+    &:focus
+    {
+        background: $lightGrey;
+    }
+}
+
+.bu-navigation-subToggle
+{
+    font-weight: 700;
+}
+
+.bu-navigation-submenu--nested .bu-navigation-sublink
+{
+    padding-right: 3.5rem;
+}
+
+// Content pages (e.g. Products > Lyra)
+
+.bu-header--solid
+{
+    background: $darkBlue;
+}
+
+.bu-page
+{
+    background: $lightGrey;
+    min-height: calc(100vh - 4.5rem);
+    padding: 6rem 0 3rem;
+}
+
+.bu-page-content
+{
+    background: #FFF;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(19,30,19,.1);
+    margin: 0 auto;
+    max-width: 52rem;
+    padding: 2rem;
+
+    h3
+    {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 2.5rem 0 1rem;
+    }
+
+    li
+    {
+        line-height: 2;
+    }
+
+    a
+    {
+        color: $darkOrange;
+    }
+}
+
+.bu-page-meta
+{
+    color: $darkGrey;
+    font-size: .9rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media (min-width: 1050px) {
+    .bu-navigation
+    {
+        overflow: visible;
+    }
+
+    .bu-navigation-dropdown
+    {
+        position: relative;
+    }
+
+    .bu-navigation-link.bu-navigation-dropdownToggle
+    {
+        width: auto;
+    }
+
+    .bu-navigation-submenu--top
+    {
+        background: $white;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 1.5rem rgba(19,30,19,.35);
+        min-width: 15rem;
+        overflow: hidden;
+        padding: .5rem 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+
+    .bu-navigation-subToggle,
+    .bu-navigation-sublink
+    {
+        padding: .75rem 1.5rem;
+        text-align: left;
+    }
+
+    .bu-navigation-submenu--nested .bu-navigation-sublink
+    {
+        padding: .6rem 1.5rem .6rem 2.5rem;
+    }
+
+    .bu-page
+    {
+        padding: 9rem 0 4rem;
+    }
+
+    .bu-page-content
+    {
+        padding: 3rem 4rem;
+    }
+}
