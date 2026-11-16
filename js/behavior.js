@@ -8,7 +8,7 @@ function docReady(fn) {
     }
 }
 
-docReady(function() {
+docReady(function () {
     const menuWrapper = document.querySelector('.bu-navigationWrap');
 
     function closeMenu() {
@@ -19,23 +19,23 @@ docReady(function() {
     const isHomePage = !!document.getElementById('doctrine');
 
     if (isHomePage) {
-        document.querySelector('.bu-logoBlock').onclick = function(e) {
+        document.querySelector('.bu-logoBlock').onclick = function (e) {
             window.scroll({
                 top: 0,
             });
         };
 
-        document.querySelector('.bu-navigation-link--home').onclick = function(e) {
+        document.querySelector('.bu-navigation-link--home').onclick = function (e) {
             window.scroll({
                 top: 0
             });
             closeMenu();
         };
 
-        ['doctrine', 'services', 'leadership', 'contactUs'].forEach(function(id) {
+        ['doctrine', 'services', 'leadership', 'contactUs'].forEach(function (id) {
             const link = document.querySelector('.bu-navigation-link--' + id);
             if (link) {
-                link.onclick = function(e) {
+                link.onclick = function (e) {
                     document.getElementById(id).scrollIntoView();
                     closeMenu();
                 };
@@ -43,11 +43,11 @@ docReady(function() {
         });
     }
 
-    document.querySelector('.bu-navigation-toggle').onclick = function(e) {
+    document.querySelector('.bu-navigation-toggle').onclick = function (e) {
         menuWrapper.classList.toggle('bu-navigation--open');
     };
 
-    // Dropdown menus (Products > Lyra > ...)
+    // Dropdown menus (Products > appName > ...)
     const dropdownToggles = document.querySelectorAll('.bu-navigation-dropdownToggle');
 
     function setOpen(dropdown, open) {
@@ -58,33 +58,33 @@ docReady(function() {
         }
         // Closing a menu also closes any menus nested inside it
         if (!open) {
-            dropdown.querySelectorAll('.bu-navigation-dropdown--open').forEach(function(child) {
+            dropdown.querySelectorAll('.bu-navigation-dropdown--open').forEach(function (child) {
                 setOpen(child, false);
             });
         }
     }
 
     function closeAllDropdowns() {
-        document.querySelectorAll('.bu-navigation-dropdown--open').forEach(function(dropdown) {
+        document.querySelectorAll('.bu-navigation-dropdown--open').forEach(function (dropdown) {
             setOpen(dropdown, false);
         });
     }
 
-    dropdownToggles.forEach(function(toggle) {
-        toggle.addEventListener('click', function(e) {
+    dropdownToggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
             e.stopPropagation();
             const dropdown = toggle.parentElement;
             setOpen(dropdown, !dropdown.classList.contains('bu-navigation-dropdown--open'));
         });
     });
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (!e.target.closest('.bu-navigation-dropdown')) {
             closeAllDropdowns();
         }
     });
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeAllDropdowns();
         }
@@ -95,9 +95,9 @@ docReady(function() {
     const header = document.querySelector('.bu-header');
 
     if (doctrineSection) {
-        window.onscroll = function(){
+        window.onscroll = function () {
             //TOP
-            if(doctrineSection.getBoundingClientRect().top <= 0){
+            if (doctrineSection.getBoundingClientRect().top <= 0) {
                 header.classList.add('buu-header--scrolled');
             }
             else {

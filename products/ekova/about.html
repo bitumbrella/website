@@ -1,3 +1,6 @@
+---
+root: ../../
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="About Lyra - Bit Umbrella">
+    <meta name="description" content="About {{ site.app_name }} - Bit Umbrella">
     <link rel="stylesheet" href="../../css/bitumbrella.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#131e1d">
-    <title>About Lyra - Bit Umbrella</title>
+    <title>About {{ site.app_name }} - Bit Umbrella</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -160,6 +163,18 @@
             margin: 0;
         }
 
+        /* What the name stands for, its initials picked out - as under the title in the app. */
+        .expansion {
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            margin: 4px 0 0;
+            color: var(--muted);
+        }
+
+        .expansion b {
+            color: var(--accent);
+        }
+
         .tagline {
             font-size: 1.15rem;
             margin: 6px 0 0;
@@ -270,74 +285,28 @@
 
 <body>
     <div class="bu">
-        <header class="bu-header bu-header--solid">
-            <div class="buu-wrap buu-wrap--header">
-                <div class="bu-header-inner">
-                    <a class="bu-logoBlock" href="../../index.html">
-                        <img src="../../img/UmbrellaLogo.svg" alt="Bit Umbrella Logo" class="bu-logoBlock-logo">
-                    </a>
-                    <h1 class="bu-header-name">Bit Umbrella</h1>
-                    <div class="bu-navigationWrap">
-                        <nav class="bu-navigation">
-                            <a class="bu-navigation-link bu-navigation-link--home" href="../../index.html">Home</a>
-                            <a class="bu-navigation-link bu-navigation-link--doctrine"
-                                href="../../index.html#doctrine">Doctrine</a>
-                            <a class="bu-navigation-link bu-navigation-link--services"
-                                href="../../index.html#services">Services</a>
-                            <a class="bu-navigation-link bu-navigation-link--leadership"
-                                href="../../index.html#leadership">Leadership</a>
-                            <div class="bu-navigation-dropdown">
-                                <button class="buu-button bu-navigation-link bu-navigation-dropdownToggle"
-                                    aria-expanded="false" aria-controls="productsMenu">Products<span
-                                        class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                <div class="bu-navigation-submenu bu-navigation-submenu--top" id="productsMenu">
-                                    <div class="bu-navigation-dropdown">
-                                        <button class="buu-button bu-navigation-subToggle bu-navigation-dropdownToggle"
-                                            aria-expanded="false" aria-controls="lyraMenu">Lyra<span
-                                                class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                        <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="lyraMenu">
-                                            <a class="bu-navigation-sublink" href="about.html"
-                                                aria-current="page">About</a>
-                                            <a class="bu-navigation-sublink" href="privacy-policy.html">Privacy
-                                                Policy</a>
-                                            <a class="bu-navigation-sublink" href="terms-of-service.html">Terms of
-                                                Service</a>
-                                            <a class="bu-navigation-sublink" href="delete-my-data.html">Delete My
-                                                Data</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="bu-navigation-link bu-navigation-link--contactUs"
-                                href="../../index.html#contactUs">Contact Us</a>
-                        </nav>
-                        <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
-                            <svg class="bu-navigation-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor"
-                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
+{% include header.html %}
         <main class="bu-main">
             <section class="bu-page">
                 <div class="buu-wrap">
                     <article class="bu-page-content">
                         <main class="wrap">
                             <div class="hero">
-                                <img src="../../img/lyra-icon.png" alt="Lyra app icon">
+                                <img src="../../img/app-icon.png" alt="{{ site.app_name }} app icon">
                                 <div>
-                                    <h1>Lyra</h1>
+                                    <h1>{{ site.app_name }}</h1>
+                                    <p class="expansion"><b>E</b>xtracted <b>K</b>nowledge <b>O</b>rganizer &amp;
+                                        <b>V</b>oice <b>A</b>ssistant</p>
                                     <p class="tagline">Your photos and documents, finally easy to find.</p>
                                 </div>
                             </div>
 
                             <p class="lead">
-                                Photos pile up, and important documents get lost in folders and inboxes. Lyra is a smart
+                                Photos pile up, and important documents get lost in folders and inboxes. {{ site.app_name }} is a
+                                smart
                                 library for both.
-                                Add a photo or a document once, and Lyra reads it, describes it and remembers it - so
+                                Add a photo or a document once, and {{ site.app_name }} reads it, describes it and remembers it -
+                                so
                                 later you can find
                                 it, or simply ask about it, in your own words.
                             </p>
@@ -346,12 +315,13 @@
                                 <p class="kicker">Smart photo library</p>
                                 <h2>Photos that know what's in them</h2>
                                 <p>
-                                    Every photo you add to Lyra becomes an <strong>Asset</strong> with real context
-                                    around it. Lyra
+                                    Every photo you add to {{ site.app_name }} becomes an <strong>Asset</strong> with real
+                                    context
+                                    around it. {{ site.app_name }}
                                     describes what's in the picture, tags it, notes its main colours, reads any text in
                                     it, and - if you
                                     allow it - remembers where you took it. Add your own notes, or record a quick voice
-                                    note and Lyra
+                                    note and {{ site.app_name }}
                                     writes it down for you.
                                 </p>
                                 <p>
@@ -366,24 +336,26 @@
                                 <h2>Upload a document once. Find anything in it in seconds.</h2>
                                 <p>
                                     Add PDFs, Word and Excel files - insurance policies, receipts, bills, contracts,
-                                    statements. Lyra
+                                    statements. {{ site.app_name }}
                                     reads every page, works out what kind of document it is, and picks out the details
                                     that matter, such
                                     as policy numbers, dates and amounts. Even a scanned PDF or a photo of a paper
                                     document is read.
                                 </p>
                                 <p>
-                                    No more opening file after file to find one number: search or ask, and Lyra takes
+                                    No more opening file after file to find one number: search or ask, and {{ site.app_name }}
+                                    takes
                                     you straight to
                                     the right document, with the original one tap away.
                                 </p>
                             </section>
 
                             <section class="feature">
-                                <p class="kicker">Ask Lyra</p>
+                                <p class="kicker">Ask {{ site.app_name }}</p>
                                 <h2>Ask a question. Get the answer, not a list of files.</h2>
                                 <p>
-                                    Type or simply hold the mic and ask. Lyra answers instantly, using only what's in
+                                    Type or simply hold the mic and ask. {{ site.app_name }} answers instantly, using only what's
+                                    in
                                     your own library -
                                     and only what's relevant to your question - and can read the answer aloud. Under
                                     every answer you see
@@ -403,7 +375,7 @@
                                 <h2>Describe it the way you remember it</h2>
                                 <p>
                                     You don't need the exact words. Describe what you're looking for in a full sentence,
-                                    and Lyra
+                                    and {{ site.app_name }}
                                     understands what you mean - not just the words you typed. Prefer keywords? Those
                                     work too, and you
                                     can narrow results by tag, colour or place.
@@ -415,7 +387,8 @@
                                     <li>passport</li>
                                 </ul>
                                 <p>
-                                    Or just point your camera: <strong>Scan</strong> a thing in front of you and Lyra
+                                    Or just point your camera: <strong>Scan</strong> a thing in front of you and
+                                    {{ site.app_name }}
                                     finds it in your
                                     library.
                                 </p>
@@ -436,14 +409,16 @@
                                     right from the
                                     app.</div>
                             </div>
-                            <p class="muted">Read the details in our <a href="privacy.html">privacy policy</a>.</p>
+                            <p class="muted">Read the details in our <a href="privacy-policy.html">privacy policy</a>.
+                            </p>
 
                             <div class="cta">
-                                <h2>Get Lyra</h2>
+                                <h2>Get {{ site.app_name }}</h2>
                                 <p style="margin:0">
-                                    Lyra is coming soon to Google Play for Android. Start free - no card needed.
+                                    {{ site.app_name }} is coming soon to Google Play for Android. Start free - no card needed.
                                     Questions or feedback? Write to us at
-                                    <a href="mailto:reachus@bitumbrella.tech?subject=Lyra">reachus@bitumbrella.tech</a>.
+                                    <a
+                                        href="mailto:reachus@bitumbrella.tech?subject={{ site.app_name | url_encode }}">reachus@bitumbrella.tech</a>.
                                 </p>
                             </div>
                         </main>

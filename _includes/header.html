@@ -1,0 +1,63 @@
+{% comment %}
+    Shared site header, used by every page via an "include header.html" tag.
+    Pages set in their front matter:
+      is_home: true   - on the home page (links scroll within the page)
+      root: ../../    - path back to the site root from the page's folder
+{% endcomment %}
+{%- if page.is_home -%}
+    {%- assign home_url = "" -%}
+{%- else -%}
+    {%- assign home_url = page.root | append: "index.html" -%}
+{%- endif -%}
+{%- assign app_dir = page.root | append: "products/" | append: site.app_slug | append: "/" -%}
+{%- assign app_url_prefix = "/products/" | append: site.app_slug | append: "/" -%}
+        <header class="bu-header{% unless page.is_home %} bu-header--solid{% endunless %}">
+            <div class="buu-wrap buu-wrap--header">
+                <div class="bu-header-inner">
+                    <a class="bu-logoBlock" href="{% if page.is_home %}#welcome{% else %}{{ home_url }}{% endif %}">
+                        <img src="{{ page.root }}img/UmbrellaLogo.svg" alt="Bit Umbrella Logo" class="bu-logoBlock-logo">
+                    </a>
+                    <h1 class="bu-header-name">Bit Umbrella</h1>
+                    <div class="bu-navigationWrap">
+                        <nav class="bu-navigation">
+                            <a class="bu-navigation-link bu-navigation-link--home"
+                                href="{% if page.is_home %}#welcome{% else %}{{ home_url }}{% endif %}">Home</a>
+                            <a class="bu-navigation-link bu-navigation-link--doctrine"
+                                href="{{ home_url }}#doctrine">Doctrine</a>
+                            <a class="bu-navigation-link bu-navigation-link--services"
+                                href="{{ home_url }}#services">Services</a>
+                            <a class="bu-navigation-link bu-navigation-link--leadership"
+                                href="{{ home_url }}#leadership">Leadership</a>
+                            <div class="bu-navigation-dropdown">
+                                <button class="buu-button bu-navigation-link bu-navigation-dropdownToggle"
+                                    aria-expanded="false" aria-controls="productsMenu">Products<span
+                                        class="bu-navigation-caret" aria-hidden="true"></span></button>
+                                <div class="bu-navigation-submenu bu-navigation-submenu--top" id="productsMenu">
+                                    <div class="bu-navigation-dropdown">
+                                        <button class="buu-button bu-navigation-subToggle bu-navigation-dropdownToggle"
+                                            aria-expanded="false" aria-controls="appMenu">{{ site.app_name }}<span
+                                                class="bu-navigation-caret" aria-hidden="true"></span></button>
+                                        <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="appMenu">
+                                            {%- for app_page in site.app_pages %}
+                                            {%- assign app_page_url = app_url_prefix | append: app_page.file %}
+                                            <a class="bu-navigation-sublink" href="{{ app_dir }}{{ app_page.file }}"
+                                                {%- if page.url == app_page_url %} aria-current="page"{% endif %}>{{ app_page.label }}</a>
+                                            {%- endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="bu-navigation-link bu-navigation-link--contactUs"
+                                href="{{ home_url }}#contactUs">Contact Us</a>
+                        </nav>
+                        <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
+                            <svg id="navToggleIcon" class="bu-navigation-icon" viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>

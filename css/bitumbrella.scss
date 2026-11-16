@@ -2,7 +2,7 @@
 
 // Variables
 
-$black: rgb(19,30,29);
+$black: rgb(19, 30, 29);
 $white: #F5F5F5;
 $lightGrey: #EEE;
 $grey: #DDD;
@@ -22,39 +22,36 @@ $brandColor: #d05f01;
 
 // Base Styles
 
-html
-{
+html {
     box-sizing: border-box;
     font-size: 90%;
     scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-  
 
-body
-{
+
+body {
     color: $black;
     font-family: 'Montserrat', sans-serif;
 }
 
-a
-{
+a {
     color: $white;
-    -webkit-tap-highlight-color: rgba(208,95,1,.15);
+    -webkit-tap-highlight-color: rgba(208, 95, 1, .15);
 }
 
-a:focus
-{
+a:focus {
     outline: none;
 }
 
 // Utility Classes
 
-.buu-button
-{
+.buu-button {
     /* Button Reset */
     background-color: transparent;
     border: none;
@@ -63,12 +60,11 @@ a:focus
     font: inherit;
     outline: none;
     padding: 0;
-    -webkit-tap-highlight-color: rgba(208,95,1,.15);
+    -webkit-tap-highlight-color: rgba(208, 95, 1, .15);
     text-shadow: 0 0 2px $black;
 }
 
-.buu-wrap
-{
+.buu-wrap {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
@@ -76,53 +72,44 @@ a:focus
     width: 100%;
 }
 
-.buu-wrap--header
-{
+.buu-wrap--header {
     padding: 1rem;
 }
 
-.buu-wrap--folder
-{
+.buu-wrap--folder {
     max-width: 1920px;
     padding: 0;
 }
 
-.buu-paragraph
-{
+.buu-paragraph {
     line-height: 2;
     font-size: 1rem;
 }
 
-.buu-link--dark
-{
+.buu-link--dark {
     color: $darkGrey;
 }
 
-.buu-disclaimer
-{
+.buu-disclaimer {
     font-weight: 300;
     margin: 0;
 }
 
-.buu-paragraph--leadership
-{
+.buu-paragraph--leadership {
     line-height: 1.75;
     margin: 2rem 0 1rem;
 }
 
 .buu-subheader,
-.buu-meta
-{
+.buu-meta {
     display: block;
 }
 
-.buu-subheader
-{
+.buu-subheader {
     font-weight: bold;
 }
 
-.buu-meta
-{
+.buu-meta {
     font-size: .9rem;
     font-weight: 300;
 }
@@ -132,8 +119,7 @@ a:focus
 $logoBlock: 5rem;
 $logoBlockLarge: 7rem;
 
-.bu-logoBlock
-{
+.bu-logoBlock {
     align-items: center;
     background: $brandColor;
     display: flex;
@@ -149,31 +135,26 @@ $logoBlockLarge: 7rem;
     padding: 1.75rem .75rem 1rem;
     top: -.75rem;
 
-    &:hover
-    {
+    &:hover {
         transform: translateY(.25rem);
     }
 
-    &:focus
-    {
+    &:focus {
         transform: translateY(0);
     }
 
-    &:active
-    {
+    &:active {
         transform: translateY(.5rem);
     }
 }
 
-.bu-logoBlock-logo
-{
+.bu-logoBlock-logo {
     width: 100%;
 }
 
-.bu-header
-{
-    background: rgba(19,30,19,.25);
-    border-bottom: 1px solid rgba(255,255,255,.15);
+.bu-header {
+    background: rgba(19, 30, 19, .25);
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
     color: $white;
     left: 0;
     position: fixed;
@@ -183,27 +164,23 @@ $logoBlockLarge: 7rem;
     z-index: 3;
 }
 
-.buu-header--scrolled
-{
-    background: rgba(19,30,19,.65);
+.buu-header--scrolled {
+    background: rgba(19, 30, 19, .65);
 }
 
-.bu-header-inner
-{
+.bu-header-inner {
     display: flex;
     align-items: center;
 }
 
-.bu-header-name
-{
+.bu-header-name {
     flex-grow: 1;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0 3rem 0 ($logoBlock + .5rem);
 }
 
-.bu-navigation
-{
+.bu-navigation {
     background: $white;
     border-left: 1px solid $grey;
     bottom: 0;
@@ -219,8 +196,7 @@ $logoBlockLarge: 7rem;
     z-index: 4;
 }
 
-.bu-navigation-toggle
-{
+.bu-navigation-toggle {
     align-items: center;
     color: white;
     display: flex;
@@ -234,14 +210,12 @@ $logoBlockLarge: 7rem;
     transition: right 200ms, background 133ms linear, color 200ms linear;
 }
 
-.bu-navigation-icon
-{
+.bu-navigation-icon {
     height: 2rem;
     width: 2rem;
 }
 
-.bu-navigation--open
-{
+.bu-navigation--open {
     .bu-navigation {
         opacity: 1;
         pointer-events: auto;
@@ -255,8 +229,7 @@ $logoBlockLarge: 7rem;
     }
 }
 
-.bu-navigation-link
-{
+.bu-navigation-link {
     border: 2px solid transparent;
     display: block;
     color: $black;
@@ -270,14 +243,12 @@ $logoBlockLarge: 7rem;
     }
 
     &:focus,
-    &:active
-    {
-        text-shadow: 0 0 16px rgba(19,30,19,.65);
+    &:active {
+        text-shadow: 0 0 16px rgba(19, 30, 19, .65);
     }
 }
 
-.bu-navigation-link--contactUs
-{
+.bu-navigation-link--contactUs {
     color: $white;
     background: $brandColor;
     border-radius: .5rem;
@@ -285,47 +256,39 @@ $logoBlockLarge: 7rem;
     padding: 1rem 3rem 1rem 1rem;
     text-shadow: 0 0 2px $black;
 
-    &:last-child
-    {
+    &:last-child {
         margin-right: -1rem;
     }
 
     &:focus,
-    &:hover
-    {
-        border: 2px solid rgba(255,255,255,.25);
+    &:hover {
+        border: 2px solid rgba(255, 255, 255, .25);
     }
 }
 
-.buu-paragraph--intro
-{
+.buu-paragraph--intro {
     margin-bottom: 3rem;
 }
 
-.bu-viewNext
-{
+.bu-viewNext {
     text-align: center;
 }
 
-.bu-viewNext-link
-{
+.bu-viewNext-link {
     display: inline-block;
 }
 
-.bu-viewNext-icon
-{
+.bu-viewNext-icon {
     height: 2.75rem;
     width: 2.75rem;
 }
 
 .bu-footer,
-.bu-section
-{
+.bu-section {
     padding: 2rem 0;
 }
 
-.bu-section
-{
+.bu-section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -336,14 +299,12 @@ $logoBlockLarge: 7rem;
 
 // Out of place media query for cascading reasons
 @media (min-width: 600px) {
-    .bu-section
-    {
+    .bu-section {
         min-height: 75vh;
     }
 }
 
-.bu-section-header
-{
+.bu-section-header {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 3rem;
@@ -353,15 +314,14 @@ $logoBlockLarge: 7rem;
 
 $hrWidth: 6rem;
 
-.bu-section-header--hr
-{
+.bu-section-header--hr {
     margin-bottom: 5rem;
     position: relative;
 
     &::after {
         content: "";
         height: 2px;
-        background: rgba(19,30,19,.25);
+        background: rgba(19, 30, 19, .25);
         position: absolute;
         bottom: -2rem;
         left: calc(50% - #{$hrWidth * 0.5});
@@ -370,25 +330,21 @@ $hrWidth: 6rem;
 }
 
 .bu-section-header--hr--leadership,
-.bu-section-header--hr--contact
-{
+.bu-section-header--hr--contact {
     &::after {
-        background: rgba(255,255,255,.25);
+        background: rgba(255, 255, 255, .25);
     }
 }
 
-.bu-footer-inner
-{
+.bu-footer-inner {
     text-align: center;
 }
 
-.bu-sectionWrap
-{
+.bu-sectionWrap {
     z-index: 1;
 }
 
-.bu-sectionWrap--intro
-{
+.bu-sectionWrap--intro {
     // Removed webp due to poor browser support
     // background: url('../img/umbrellas_sh.webp') no-repeat center top;
     background: url('../img/umbrellas_sh.jpg') no-repeat center top;
@@ -403,9 +359,8 @@ $hrWidth: 6rem;
 
 // Section Styling
 
-.bu-section--welcome
-{
-    background: rgba(0,0,0,.75);
+.bu-section--welcome {
+    background: rgba(0, 0, 0, .75);
     color: $white;
     left: 0;
     height: 100vh;
@@ -414,69 +369,59 @@ $hrWidth: 6rem;
     top: 0;
 }
 
-.bu-section--doctrine
-{
+.bu-section--doctrine {
     background: $lightGrey;
     margin-top: 100vh;
     min-height: 100vh;
 }
 
-.bu-section--services
-{
+.bu-section--services {
     background: $lightBlue;
     min-height: 100vh;
 }
 
-.bu-section--leadership
-{
+.bu-section--leadership {
     color: $white;
     background: $orange;
 }
 
-.bu-section--contactUs
-{
+.bu-section--contactUs {
     background: $darkBlue;
-    box-shadow: inset 0 1rem 2rem rgba(19,30,19,.25), inset 0 -1rem .5rem rgba(19,30,19,.25);
+    box-shadow: inset 0 1rem 2rem rgba(19, 30, 19, .25), inset 0 -1rem .5rem rgba(19, 30, 19, .25);
     color: $white;
 }
 
-.bu-footer
-{
+.bu-footer {
     background: $orange;
     color: $white;
 }
 
-.bu-fold
-{
+.bu-fold {
     background: #FFF;
-    box-shadow: 0 .5rem 1rem rgba(19,30,19,.1);
+    box-shadow: 0 .5rem 1rem rgba(19, 30, 19, .1);
     margin: 1rem 1rem 2rem;
     padding: 2rem 3rem;
 }
 
-.bu-folder--serviced
-{
+.bu-folder--serviced {
     background: #FFF;
-    box-shadow: 0 .5rem 1rem rgba(19,30,19,.1);
+    box-shadow: 0 .5rem 1rem rgba(19, 30, 19, .1);
     margin: 1rem 1rem 0;
 }
 
-.bu-fold--fourth
-{
+.bu-fold--fourth {
     background: none;
     border: none;
     box-shadow: none;
     padding: 1rem 0 0;
 
-    &:last-child
-    {
+    &:last-child {
         padding-bottom: 1.5rem;
     }
 }
 
 .bu-fold--leadership,
-.bu-fold--contact
-{
+.bu-fold--contact {
     background: none;
     border: none;
     box-shadow: none;
@@ -484,29 +429,25 @@ $hrWidth: 6rem;
     padding: 4rem 0 0;
 }
 
-.bu-fold-headerWrap--leadership
-{
+.bu-fold-headerWrap--leadership {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.bu-fold-header
-{
+.bu-fold-header {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.bu-fold-header--leadership
-{
+.bu-fold-header--leadership {
     font-size: 1.8rem;
     margin-bottom: .75rem;
     font-weight: normal;
 }
 
-.bu-serviced
-{
+.bu-serviced {
     font-size: 2rem;
     font-weight: 300;
     // margin: -3rem 0;
@@ -514,13 +455,11 @@ $hrWidth: 6rem;
     text-transform: uppercase;
 }
 
-.bu-fold-blurb
-{
+.bu-fold-blurb {
     text-align: center;
 }
 
-.bu-fold-header--serviced
-{
+.bu-fold-header--serviced {
     font-size: 1.3rem;
     font-weight: 400;
 
@@ -530,108 +469,93 @@ $hrWidth: 6rem;
     }
 }
 
-.bu-fold-header--services
-{
+.bu-fold-header--services {
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
+    ;
     display: flex;
 }
 
-.bu-icon--services
-{
+.bu-icon--services {
     height: 2rem;
     margin-right: 1rem;
     margin-left: -1.5rem;
     width: 2rem;
 }
 
-.buu-subheader--leadership
-{
+.buu-subheader--leadership {
     margin: .25rem 0;
     font-weight: normal;
 }
 
-.bu-portrait
-{
+.bu-portrait {
     border: 1px solid $darkOrange;
     border-radius: 50%;
     // box-shadow: 0 0 0.5rem rgba(255,255,255, .5);
     overflow: hidden;
 }
 
-.bu-portrait-img
-{
+.bu-portrait-img {
     display: block;
     height: 120px;
     width: 120px;
 }
 
 /* Fix for picture element instead of img with webp */
-.bu-portrait-img > source,
-.bu-portrait-img > img
-{
+.bu-portrait-img>source,
+.bu-portrait-img>img {
     width: 100%;
 }
 
-.bu-form
-{
+.bu-form {
     margin-bottom: 1rem;
 }
 
-.bu-form-field
-{
+.bu-form-field {
     margin-bottom: 1rem;
 }
 
 .bu-form-input,
-.bu-form-textarea
-{
-    background: rgba(255,255,255,.25);
-    border: 1px solid rgba(255,255,255,.5);
+.bu-form-textarea {
+    background: rgba(255, 255, 255, .25);
+    border: 1px solid rgba(255, 255, 255, .5);
     border-radius: .25rem;
     color: $white;
     padding: 1rem .75rem;
     transition: background 200ms, border 200ms, color 200ms;
     width: 100%;
 
-    &:hover
-    {
-        border: 1px solid rgba(255,255,255, .65);
+    &:hover {
+        border: 1px solid rgba(255, 255, 255, .65);
     }
 
-    &:focus
-    {
-        background: rgba(255,255,255,.75);
-        border: 1px solid rgba(255,255,255, .85);
+    &:focus {
+        background: rgba(255, 255, 255, .75);
+        border: 1px solid rgba(255, 255, 255, .85);
         color: $black;
         outline: none;
 
-        &::placeholder
-        {
+        &::placeholder {
             color: $darkGrey;
         }
     }
 
-    &::placeholder
-    {
-        color: rgba(255,255,255,.5);
+    &::placeholder {
+        color: rgba(255, 255, 255, .5);
     }
 }
 
-.bu-form-textarea
-{
+.bu-form-textarea {
     line-height: 2;
     min-height: 10rem;
     padding: .5rem .75rem;
 }
 
-.bu-form-submitWrap
-{
+.bu-form-submitWrap {
     text-align: center;
 }
 
-.bu-form-submit
-{
+.bu-form-submit {
     align-items: center;
     color: $white;
     background: $brandColor;
@@ -642,26 +566,22 @@ $hrWidth: 6rem;
     transition: border 200ms;
 
     &:focus,
-    &:hover
-    {
-        border: 2px solid rgba(255,255,255,.25);
+    &:hover {
+        border: 2px solid rgba(255, 255, 255, .25);
     }
 
-    &:active
-    {
+    &:active {
         border: 2px solid $brandColor;
     }
 }
 
-.bu-form-submitIcon
-{
+.bu-form-submitIcon {
     height: 1.5rem;
     margin-right: 1rem;
     width: 1.5rem;
 }
 
-.bu-map
-{
+.bu-map {
     display: block;
     // Removed webp due to poor browser support
     // background: $white url('../img/map.webp') no-repeat center center;
@@ -673,22 +593,19 @@ $hrWidth: 6rem;
 // Media Queries - mobile first
 
 @media (min-width: 500px) {
-    .bu-sectionWrap--intro
-    {
+    .bu-sectionWrap--intro {
         background-size: cover;
         background-position: center center;
     }
 
-    .bu-folder--serviced
-    {
+    .bu-folder--serviced {
         background: #FFF;
-        box-shadow: 0 .5rem 1rem rgba(19,30,19,.1);
+        box-shadow: 0 .5rem 1rem rgba(19, 30, 19, .1);
         display: flex;
         flex-wrap: wrap;
     }
 
-    .bu-fold--fourth
-    {
+    .bu-fold--fourth {
         background: none;
         border: none;
         box-shadow: none;
@@ -699,20 +616,17 @@ $hrWidth: 6rem;
 }
 
 @media (min-width: 600px) {
-    .bu-section
-    {
+    .bu-section {
         padding: 7.4375rem 0 2rem;
     }
 
-    .bu-section-header
-    {
+    .bu-section-header {
         font-size: 2rem;
     }
 }
 
 @media (min-width: 960px) {
-    .bu-sectionWrap--intro
-    {
+    .bu-sectionWrap--intro {
         // Removed webp due to poor browser support
         // background: url('../img/umbrellas_s.webp') no-repeat center top;
         background: url('../img/umbrellas_s.jpg') no-repeat center top;
@@ -722,23 +636,19 @@ $hrWidth: 6rem;
 }
 
 @media (min-width: 1050px) {
-    html
-    {
+    html {
         font-size: 100%;
     }
 
-    .buu-wrap
-    {
+    .buu-wrap {
         padding: 1rem;
     }
 
-    .buu-wrap--folder
-    {
+    .buu-wrap--folder {
         padding: 0;
     }
 
-    .bu-logoBlock
-    {
+    .bu-logoBlock {
         border-radius: 0 0 .5rem .5rem;
         height: $logoBlockLarge + .75rem;
         padding: 1.75rem 1rem 1rem;
@@ -746,38 +656,32 @@ $hrWidth: 6rem;
         top: -.75rem;
         width: $logoBlockLarge;
 
-        &:hover
-        {
+        &:hover {
             transform: translateY(.25rem);
         }
 
-        &:focus
-        {
+        &:focus {
             transform: translateY(0);
         }
 
-        &:active
-        {
+        &:active {
             transform: translateY(.75rem);
         }
     }
 
-    .bu-header-name
-    {
+    .bu-header-name {
         font-size: 2rem;
         margin: 0 0 0 ($logoBlockLarge + 1rem);
     }
 
-    .bu-navigation-toggle
-    {
+    .bu-navigation-toggle {
         opacity: 0;
         pointer-events: none;
         right: -4rem;
         top: 0;
     }
 
-    .bu-navigation
-    {
+    .bu-navigation {
         align-items: center;
         background: none;
         border: none;
@@ -788,32 +692,28 @@ $hrWidth: 6rem;
         transform: none;
     }
 
-    .bu-navigation-link
-    {
+    .bu-navigation-link {
         border: 2px solid transparent;
         color: $white;
         padding: 1rem 2rem;
         text-decoration: none;
 
-        &:first-child
-        {
+        &:first-child {
             margin-top: 0;
         }
 
-        &:last-child
-        {
+        &:last-child {
             margin-right: 0;
         }
 
         &:hover,
         &:focus,
         &:active {
-            text-shadow: 0 0 16px rgba(255,255,255,.5);
+            text-shadow: 0 0 16px rgba(255, 255, 255, .5);
         }
     }
 
-    .bu-navigation-link--contactUs
-    {
+    .bu-navigation-link--contactUs {
         background: $brandColor;
         border-radius: .5rem;
         margin-left: 1rem;
@@ -821,9 +721,8 @@ $hrWidth: 6rem;
         transition: border 200ms;
 
         &:focus,
-        &:hover
-        {
-            border: 2px solid rgba(255,255,255,.25);
+        &:hover {
+            border: 2px solid rgba(255, 255, 255, .25);
         }
 
         &:focus,
@@ -835,95 +734,81 @@ $hrWidth: 6rem;
 }
 
 @media (min-width: 1180px) {
-    .buu-disclaimer
-    {
+    .buu-disclaimer {
         font-size: .9rem;
         font-weight: 300;
         margin: 2rem 0;
     }
 
-    .bu-section--doctrine
-    {
+    .bu-section--doctrine {
         background: $grey url('../img/doctrinebg2.svg') no-repeat center center;
         background-blend-mode: darken;
         background-size: cover;
     }
 
-    .bu-folder
-    {
+    .bu-folder {
         display: flex;
         flex-wrap: wrap;
     }
 
     .bu-folder--services,
-    .bu-folder--serviced
-    {
-        box-shadow: 0 .5rem 1rem rgba(19,30,19,.1);
+    .bu-folder--serviced {
+        box-shadow: 0 .5rem 1rem rgba(19, 30, 19, .1);
         margin-bottom: -2rem;
     }
 
-    .bu-folder--serviced
-    {
+    .bu-folder--serviced {
         margin: 1rem 0 0;
     }
 
-    .bu-fold
-    {
+    .bu-fold {
         border: 0;
         box-shadow: none;
         margin: 0;
         padding: 3rem 4rem;
     }
 
-    .bu-fold--fourth
-    {
+    .bu-fold--fourth {
         padding: 2rem 3rem;
         width: 25%;
     }
 
-    .bu-fold--third
-    {
+    .bu-fold--third {
         width: 33.333%;
     }
 
-    .bu-fold--half
-    {
+    .bu-fold--half {
         width: 50%;
     }
 
-    .bu-fold--leadership
-    {
+    .bu-fold--leadership {
         text-align: center;
     }
 
-    .bu-form-submitWrap
-    {
+    .bu-form-submitWrap {
         text-align: left;
     }
 }
 
 @media (min-width: 1322px) {
-    .bu-logoBlock
-    {
+    .bu-logoBlock {
         left: 0;
     }
 }
+
 // Products dropdown navigation
 
-.bu-navigation
-{
+.bu-navigation {
     overflow-y: auto;
 }
 
-.bu-navigation-dropdownToggle
-{
+.bu-navigation-dropdownToggle {
     text-align: right;
     text-shadow: none;
     width: 100%;
 }
 
-.bu-navigation-caret
-{
+.bu-navigation-caret {
     border-bottom: 2px solid currentColor;
     border-right: 2px solid currentColor;
     display: inline-block;
@@ -935,25 +820,21 @@ $hrWidth: 6rem;
     width: .4rem;
 }
 
-.bu-navigation-dropdown--open > .bu-navigation-dropdownToggle .bu-navigation-caret
-{
+.bu-navigation-dropdown--open>.bu-navigation-dropdownToggle .bu-navigation-caret {
     margin-bottom: -.1rem;
     transform: rotate(225deg);
 }
 
-.bu-navigation-submenu
-{
+.bu-navigation-submenu {
     display: none;
 }
 
-.bu-navigation-dropdown--open > .bu-navigation-submenu
-{
+.bu-navigation-dropdown--open>.bu-navigation-submenu {
     display: block;
 }
 
 .bu-navigation-subToggle,
-.bu-navigation-sublink
-{
+.bu-navigation-sublink {
     color: $black;
     display: block;
     font-size: .95rem;
@@ -964,65 +845,55 @@ $hrWidth: 6rem;
     width: 100%;
 
     &:hover,
-    &:focus
-    {
+    &:focus {
         background: $lightGrey;
     }
 }
 
-.bu-navigation-subToggle
-{
+.bu-navigation-subToggle {
     font-weight: 700;
 }
 
-.bu-navigation-submenu--nested .bu-navigation-sublink
-{
+.bu-navigation-submenu--nested .bu-navigation-sublink {
     padding-right: 3.5rem;
 }
 
-// Content pages (e.g. Products > Lyra)
+// Content pages (e.g. Products > appName)
 
-.bu-header--solid
-{
+.bu-header--solid {
     background: $darkBlue;
 }
 
-.bu-page
-{
+.bu-page {
     background: $lightGrey;
     min-height: calc(100vh - 4.5rem);
     padding: 6rem 0 3rem;
 }
 
-.bu-page-content
-{
+.bu-page-content {
     background: #FFF;
     border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(19,30,19,.1);
+    box-shadow: 0 .5rem 1rem rgba(19, 30, 19, .1);
     margin: 0 auto;
     max-width: 52rem;
     padding: 2rem;
 
-    h3
-    {
+    h3 {
         font-size: 1.25rem;
         font-weight: 700;
         margin: 2.5rem 0 1rem;
     }
 
-    li
-    {
+    li {
         line-height: 2;
     }
 
-    a
-    {
+    a {
         color: $darkOrange;
     }
 }
 
-.bu-page-meta
-{
+.bu-page-meta {
     color: $darkGrey;
     font-size: .9rem;
     font-weight: 300;
@@ -1030,26 +901,22 @@ $hrWidth: 6rem;
 }
 
 @media (min-width: 1050px) {
-    .bu-navigation
-    {
+    .bu-navigation {
         overflow: visible;
     }
 
-    .bu-navigation-dropdown
-    {
+    .bu-navigation-dropdown {
         position: relative;
     }
 
-    .bu-navigation-link.bu-navigation-dropdownToggle
-    {
+    .bu-navigation-link.bu-navigation-dropdownToggle {
         width: auto;
     }
 
-    .bu-navigation-submenu--top
-    {
+    .bu-navigation-submenu--top {
         background: $white;
         border-radius: .5rem;
-        box-shadow: 0 .5rem 1.5rem rgba(19,30,19,.35);
+        box-shadow: 0 .5rem 1.5rem rgba(19, 30, 19, .35);
         min-width: 15rem;
         overflow: hidden;
         padding: .5rem 0;
@@ -1059,24 +926,20 @@ $hrWidth: 6rem;
     }
 
     .bu-navigation-subToggle,
-    .bu-navigation-sublink
-    {
+    .bu-navigation-sublink {
         padding: .75rem 1.5rem;
         text-align: left;
     }
 
-    .bu-navigation-submenu--nested .bu-navigation-sublink
-    {
+    .bu-navigation-submenu--nested .bu-navigation-sublink {
         padding: .6rem 1.5rem .6rem 2.5rem;
     }
 
-    .bu-page
-    {
+    .bu-page {
         padding: 9rem 0 4rem;
     }
 
-    .bu-page-content
-    {
+    .bu-page-content {
         padding: 3rem 4rem;
     }
 }

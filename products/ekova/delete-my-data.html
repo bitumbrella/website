@@ -1,3 +1,6 @@
+---
+root: ../../
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Delete My Lyra Data - Bit Umbrella">
+    <meta name="description" content="Delete My {{ site.app_name }} Data - Bit Umbrella">
     <link rel="stylesheet" href="../../css/bitumbrella.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#131e1d">
-    <title>Delete My Lyra Data - Bit Umbrella</title>
+    <title>Delete My {{ site.app_name }} Data - Bit Umbrella</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -179,56 +182,7 @@
 
 <body>
     <div class="bu">
-        <header class="bu-header bu-header--solid">
-            <div class="buu-wrap buu-wrap--header">
-                <div class="bu-header-inner">
-                    <a class="bu-logoBlock" href="../../index.html">
-                        <img src="../../img/UmbrellaLogo.svg" alt="Bit Umbrella Logo" class="bu-logoBlock-logo">
-                    </a>
-                    <h1 class="bu-header-name">Bit Umbrella</h1>
-                    <div class="bu-navigationWrap">
-                        <nav class="bu-navigation">
-                            <a class="bu-navigation-link bu-navigation-link--home" href="../../index.html">Home</a>
-                            <a class="bu-navigation-link bu-navigation-link--doctrine"
-                                href="../../index.html#doctrine">Doctrine</a>
-                            <a class="bu-navigation-link bu-navigation-link--services"
-                                href="../../index.html#services">Services</a>
-                            <a class="bu-navigation-link bu-navigation-link--leadership"
-                                href="../../index.html#leadership">Leadership</a>
-                            <div class="bu-navigation-dropdown">
-                                <button class="buu-button bu-navigation-link bu-navigation-dropdownToggle"
-                                    aria-expanded="false" aria-controls="productsMenu">Products<span
-                                        class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                <div class="bu-navigation-submenu bu-navigation-submenu--top" id="productsMenu">
-                                    <div class="bu-navigation-dropdown">
-                                        <button class="buu-button bu-navigation-subToggle bu-navigation-dropdownToggle"
-                                            aria-expanded="false" aria-controls="lyraMenu">Lyra<span
-                                                class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                        <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="lyraMenu">
-                                            <a class="bu-navigation-sublink" href="about.html">About</a>
-                                            <a class="bu-navigation-sublink" href="privacy-policy.html">Privacy
-                                                Policy</a>
-                                            <a class="bu-navigation-sublink" href="terms-of-service.html">Terms of
-                                                Service</a>
-                                            <a class="bu-navigation-sublink" href="delete-my-data.html"
-                                                aria-current="page">Delete My Data</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="bu-navigation-link bu-navigation-link--contactUs"
-                                href="../../index.html#contactUs">Contact Us</a>
-                        </nav>
-                        <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
-                            <svg class="bu-navigation-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor"
-                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
+{% include header.html %}
         <main class="bu-main">
             <section class="bu-page">
                 <div class="buu-wrap">
@@ -236,7 +190,7 @@
                         <main class="wrap">
                             <h1>Delete your data</h1>
                             <p class="lede">Use this page to permanently delete
-                                everything Lyra stores about you - no app needed.</p>
+                                everything {{ site.app_name }} stores about you - no app needed.</p>
 
                             <div class="card">
                                 <h2 style="margin-top:0">What gets deleted</h2>
@@ -244,9 +198,9 @@
                                     <li>All your Assets, with their notes, voice-note transcriptions, tags, colours,
                                         extracted text and locations</li>
                                     <li>Their photos, documents and voice notes stored in the cloud</li>
-                                    <li>Lyra answers you've reported to us (they include your question)</li>
+                                    <li>{{ site.app_name }} answers you've reported to us (they include your question)</li>
                                 </ul>
-                                <p class="muted">Deletion is immediate and covers every Lyra server (Asia and rest of
+                                <p class="muted">Deletion is immediate and covers every {{ site.app_name }} server (Asia and rest of
                                     the world). It can't be undone.</p>
 
                                 <h2>What's kept</h2>
@@ -257,9 +211,9 @@
                                         our routine log retention</li>
                                 </ul>
                                 <p class="muted">
-                                    Lyra doesn't create an account - you sign in with Google, and your Google account
+                                    {{ site.app_name }} doesn't create an account - you sign in with Google, and your Google account
                                     isn't affected.
-                                    Photos in your phone's gallery aren't touched. Data kept on your phone by the Lyra
+                                    Photos in your phone's gallery aren't touched. Data kept on your phone by the {{ site.app_name }}
                                     app is removed when you
                                     use "Delete my data" in the app, clear the app's data, or uninstall it.
                                 </p>
@@ -269,7 +223,7 @@
                                 <h2 style="margin-top:0">Delete my data</h2>
 
                                 <section id="signInStep">
-                                    <p>Sign in with the Google account you use in Lyra.</p>
+                                    <p>Sign in with the Google account you use in {{ site.app_name }}.</p>
                                     <div id="googleButton"></div>
                                     <p id="signInError" class="result err" hidden></p>
                                 </section>
@@ -291,8 +245,8 @@
 
                             <p class="muted" style="margin-top:22px">
                                 Can't sign in? Email <a
-                                    href="mailto:reachus@bitumbrella.tech?subject=Lyra%20data%20deletion%20request">reachus@bitumbrella.tech</a>
-                                from the email address you use in Lyra, and we'll help delete your data.
+                                    href="mailto:reachus@bitumbrella.tech?subject={{ site.app_name | url_encode }}%20data%20deletion%20request">reachus@bitumbrella.tech</a>
+                                from the email address you use in {{ site.app_name }}, and we'll help delete your data.
                             </p>
                         </main>
                     </article>
@@ -307,10 +261,10 @@
     </div>
     <script src="../../js/behavior.js"></script>
     <script>
-        // The Google OAuth web client the Lyra APIs validate tokens against (Authentication:Google:ClientId).
+        // The Google OAuth web client the app's APIs validate tokens against (Authentication:Google:ClientId).
         const GOOGLE_CLIENT_ID = '886999195054-bnmsmjmdjlrbbf761i36f0lhmeocu2m4.apps.googleusercontent.com';
 
-        // Every Lyra server - a user's data lives on one, but deleting on all is safe (the endpoint is
+        // Every app server - a user's data lives on one, but deleting on all is safe (the endpoint is
         // idempotent) and clears anything left from before regions were per user.
         const SERVERS = [
             { label: 'Asia', url: 'https://api.lyraapp.in' },
@@ -386,7 +340,7 @@
             summary.textContent = failed.length
                 ? "Some of your data couldn't be deleted yet: " + failed.map(o => o.server.label + ' (' + o.error + ')').join(', ') +
                 '. Please try again - it\'s safe to repeat.'
-                : 'Done. Your Lyra data has been deleted (' + totalAssets + ' Asset' + (totalAssets === 1 ? '' : 's') + ').';
+                : 'Done. Your {{ site.app_name }} data has been deleted (' + totalAssets + ' Asset' + (totalAssets === 1 ? '' : 's') + ').';
             results.appendChild(summary);
 
             show('confirmStep', Boolean(failed.length));

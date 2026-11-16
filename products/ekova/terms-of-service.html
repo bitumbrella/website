@@ -1,3 +1,6 @@
+---
+root: ../../
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Lyra Terms of Service - Bit Umbrella">
+    <meta name="description" content="{{ site.app_name }} Terms of Service - Bit Umbrella">
     <link rel="stylesheet" href="../../css/bitumbrella.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#131e1d">
-    <title>Lyra Terms of Service - Bit Umbrella</title>
+    <title>{{ site.app_name }} Terms of Service - Bit Umbrella</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -17,70 +20,21 @@
 
 <body>
     <div class="bu">
-        <header class="bu-header bu-header--solid">
-            <div class="buu-wrap buu-wrap--header">
-                <div class="bu-header-inner">
-                    <a class="bu-logoBlock" href="../../index.html">
-                        <img src="../../img/UmbrellaLogo.svg" alt="Bit Umbrella Logo" class="bu-logoBlock-logo">
-                    </a>
-                    <h1 class="bu-header-name">Bit Umbrella</h1>
-                    <div class="bu-navigationWrap">
-                        <nav class="bu-navigation">
-                            <a class="bu-navigation-link bu-navigation-link--home" href="../../index.html">Home</a>
-                            <a class="bu-navigation-link bu-navigation-link--doctrine"
-                                href="../../index.html#doctrine">Doctrine</a>
-                            <a class="bu-navigation-link bu-navigation-link--services"
-                                href="../../index.html#services">Services</a>
-                            <a class="bu-navigation-link bu-navigation-link--leadership"
-                                href="../../index.html#leadership">Leadership</a>
-                            <div class="bu-navigation-dropdown">
-                                <button class="buu-button bu-navigation-link bu-navigation-dropdownToggle"
-                                    aria-expanded="false" aria-controls="productsMenu">Products<span
-                                        class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                <div class="bu-navigation-submenu bu-navigation-submenu--top" id="productsMenu">
-                                    <div class="bu-navigation-dropdown">
-                                        <button class="buu-button bu-navigation-subToggle bu-navigation-dropdownToggle"
-                                            aria-expanded="false" aria-controls="lyraMenu">Lyra<span
-                                                class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                        <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="lyraMenu">
-                                            <a class="bu-navigation-sublink" href="about.html">About</a>
-                                            <a class="bu-navigation-sublink" href="privacy-policy.html">Privacy
-                                                Policy</a>
-                                            <a class="bu-navigation-sublink" href="terms-of-service.html"
-                                                aria-current="page">Terms of Service</a>
-                                            <a class="bu-navigation-sublink" href="delete-my-data.html">Delete My
-                                                Data</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="bu-navigation-link bu-navigation-link--contactUs"
-                                href="../../index.html#contactUs">Contact Us</a>
-                        </nav>
-                        <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
-                            <svg class="bu-navigation-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor"
-                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
+{% include header.html %}
         <main class="bu-main">
             <section class="bu-page">
                 <div class="buu-wrap">
                     <article class="bu-page-content">
                         <main class="wrap">
-                            <h1>Lyra terms of service</h1>
+                            <h1>{{ site.app_name }} terms of service</h1>
                             <p class="muted">Effective December 4, 2026</p>
 
                             <p>
                                 These terms are an agreement between you and Bit Umbrella ("we", "us") about your use of
-                                Lyra, our app for
+                                {{ site.app_name }}, our app for
                                 capturing, describing and finding everyday things from a photo or a document. By signing
                                 in to or using
-                                Lyra, you agree to these terms. If you don't agree, please don't use Lyra.
+                                {{ site.app_name }}, you agree to these terms. If you don't agree, please don't use {{ site.app_name }}.
                             </p>
                             <p>
                                 How we handle your information is explained in our <a href="privacy-policy.html">Privacy
@@ -92,38 +46,38 @@
                             <div class="summary">
                                 <strong>In short</strong>
                                 <ul>
-                                    <li>What you add to Lyra stays yours. We only use it to run Lyra for you.</li>
-                                    <li>Only add things you have the right to add, and don't use Lyra to break the law
+                                    <li>What you add to {{ site.app_name }} stays yours. We only use it to run {{ site.app_name }} for you.</li>
+                                    <li>Only add things you have the right to add, and don't use {{ site.app_name }} to break the law
                                         or harm others.</li>
-                                    <li>Lyra's AI can be wrong. Check the original before relying on a detail or an
+                                    <li>{{ site.app_name }}'s AI can be wrong. Check the original before relying on a detail or an
                                         answer.</li>
-                                    <li>Lyra isn't a backup service. Keep your own copies of anything important.</li>
-                                    <li>You can stop using Lyra and delete your data at any time.</li>
+                                    <li>{{ site.app_name }} isn't a backup service. Keep your own copies of anything important.</li>
+                                    <li>You can stop using {{ site.app_name }} and delete your data at any time.</li>
                                 </ul>
                             </div>
 
-                            <h2>1. Using Lyra</h2>
+                            <h2>1. Using {{ site.app_name }}</h2>
                             <ul>
-                                <li>You sign in to Lyra with a Google account. Keep that account secure: anything done
-                                    in Lyra while you're
+                                <li>You sign in to {{ site.app_name }} with a Google account. Keep that account secure: anything done
+                                    in {{ site.app_name }} while you're
                                     signed in is treated as done by you.</li>
                                 <li>If you're under the age at which you can agree to these terms where you live (for
                                     example 18 in
-                                    India), you may use Lyra only with the permission of a parent or guardian, who
+                                    India), you may use {{ site.app_name }} only with the permission of a parent or guardian, who
                                     agrees to these terms
                                     for you.</li>
-                                <li>You must be allowed to use Lyra under the laws that apply to you.</li>
+                                <li>You must be allowed to use {{ site.app_name }} under the laws that apply to you.</li>
                             </ul>
 
                             <h2>2. Your content</h2>
                             <ul>
                                 <li><strong>It stays yours.</strong> Photos, documents, notes, voice notes and questions
-                                    you add to Lyra
+                                    you add to {{ site.app_name }}
                                     ("your content") belong to you. We don't claim ownership of them.</li>
-                                <li><strong>Permission to run Lyra.</strong> You allow us to store, copy, process and
+                                <li><strong>Permission to run {{ site.app_name }}.</strong> You allow us to store, copy, process and
                                     analyse your content,
                                     and to send it to the service providers listed in our privacy policy, only as needed
-                                    to provide Lyra to
+                                    to provide {{ site.app_name }} to
                                     you - for example to describe a photo, read a document, transcribe a voice note or
                                     answer a question.
                                     This permission ends when you delete the content, except for copies in backups,
@@ -139,30 +93,30 @@
                             </ul>
 
                             <h2>3. Things you must not do</h2>
-                            <p>When using Lyra, you must not:</p>
+                            <p>When using {{ site.app_name }}, you must not:</p>
                             <ul>
                                 <li>Add content that is illegal, that sexually exploits or harms children, or that
                                     infringes someone
                                     else's rights (such as copyright or privacy).</li>
-                                <li>Try to access anyone else's account or data, or Lyra's servers or systems beyond
+                                <li>Try to access anyone else's account or data, or {{ site.app_name }}'s servers or systems beyond
                                     what the app lets you
                                     do.</li>
-                                <li>Upload anything designed to harm Lyra or its users, such as malware.</li>
-                                <li>Get around Lyra's limits or security, or use bots, scripts or other automated means
-                                    to use Lyra or
+                                <li>Upload anything designed to harm {{ site.app_name }} or its users, such as malware.</li>
+                                <li>Get around {{ site.app_name }}'s limits or security, or use bots, scripts or other automated means
+                                    to use {{ site.app_name }} or
                                     copy its data.</li>
-                                <li>Overload or disrupt Lyra, or resell or provide Lyra to others as a service.</li>
-                                <li>Copy, modify or reverse-engineer the Lyra app, except where the law allows it.</li>
+                                <li>Overload or disrupt {{ site.app_name }}, or resell or provide {{ site.app_name }} to others as a service.</li>
+                                <li>Copy, modify or reverse-engineer the {{ site.app_name }} app, except where the law allows it.</li>
                             </ul>
                             <p>
-                                If you break these rules, we may remove the content involved, limit your use of Lyra, or
+                                If you break these rules, we may remove the content involved, limit your use of {{ site.app_name }}, or
                                 close your access,
                                 as described in section 7.
                             </p>
 
                             <h2>4. AI features</h2>
                             <p>
-                                Lyra uses AI services to describe photos, read text, pull out details from documents
+                                {{ site.app_name }} uses AI services to describe photos, read text, pull out details from documents
                                 (such as a policy
                                 number, dates or amounts), transcribe voice and answer your questions. These results are
                                 produced
@@ -172,14 +126,14 @@
                                 <li>Always check the original photo or document before relying on a detail or an answer,
                                     especially for
                                     legal, financial, medical, insurance or safety matters.</li>
-                                <li>Lyra's answers are not professional advice.</li>
+                                <li>{{ site.app_name }}'s answers are not professional advice.</li>
                                 <li>If an answer is wrong or inappropriate, please report it from the app so we can
-                                    improve Lyra.</li>
+                                    improve {{ site.app_name }}.</li>
                             </ul>
 
                             <h2>5. Plans, limits and payments</h2>
                             <ul>
-                                <li><strong>Plans.</strong> Lyra has a free plan and also offers paid plans. Each plan
+                                <li><strong>Plans.</strong> {{ site.app_name }} has a free plan and also offers paid plans. Each plan
                                     has allowances, such
                                     as how many Assets and document pages you can add and how many questions you can ask
                                     in each period.
@@ -187,8 +141,8 @@
                                     you've used.</li>
                                 <li><strong>Periods.</strong> Allowances renew each month, on the day of the month you
                                     started using
-                                    Lyra.</li>
-                                <li><strong>Other limits.</strong> To keep Lyra working well for everyone, there are
+                                    {{ site.app_name }}.</li>
+                                <li><strong>Other limits.</strong> To keep {{ site.app_name }} working well for everyone, there are
                                     also limits on file
                                     sizes, recording lengths and how many requests you can make in a short time.</li>
                                 <li><strong>Changes.</strong> We may change plans and allowances. If a change reduces
@@ -208,41 +162,41 @@
                                     billing period.</li>
                             </ul>
 
-                            <h2>6. Availability and changes to Lyra</h2>
+                            <h2>6. Availability and changes to {{ site.app_name }}</h2>
                             <ul>
-                                <li>Lyra is a new and evolving app. We may add, change or remove features, and we can't
+                                <li>{{ site.app_name }} is a new and evolving app. We may add, change or remove features, and we can't
                                     promise that it
                                     will always be free of errors.</li>
-                                <li><strong>Lyra isn't a backup service.</strong> We work to keep your content safe, but
+                                <li><strong>{{ site.app_name }} isn't a backup service.</strong> We work to keep your content safe, but
                                     keep your own
                                     copies of important Assets and documents.</li>
-                                <li>If we decide to shut Lyra down, we'll tell you at least 30 days
+                                <li>If we decide to shut {{ site.app_name }} down, we'll tell you at least 30 days
                                     in advance, so you have time to download your documents and Assets.</li>
                             </ul>
 
-                            <h2>7. Ending your use of Lyra</h2>
+                            <h2>7. Ending your use of {{ site.app_name }}</h2>
                             <ul>
-                                <li><strong>You</strong> can stop using Lyra at any time. To delete your data, use
+                                <li><strong>You</strong> can stop using {{ site.app_name }} at any time. To delete your data, use
                                     <em>Delete my data</em>
                                     in the app (profile menu) or at
                                     <a href="delete-my-data.html">Delete my data</a>. Deleting your data doesn't
                                     cancel a paid subscription: cancel it in Google Play.
                                 </li>
-                                <li><strong>We</strong> may suspend or close your access to Lyra if you seriously or
+                                <li><strong>We</strong> may suspend or close your access to {{ site.app_name }} if you seriously or
                                     repeatedly break these
-                                    terms, if the law requires it, or to protect Lyra, its users or others. Unless the
+                                    terms, if the law requires it, or to protect {{ site.app_name }}, its users or others. Unless the
                                     law or the
                                     seriousness of the problem prevents it, we'll tell you first and give you a chance
                                     to fix the problem
                                     or download your content.</li>
                                 <li>Sections 2 (permission ends as described there), 4, 8, 9, 10 and 11 continue to
                                     apply after your use
-                                    of Lyra ends.</li>
+                                    of {{ site.app_name }} ends.</li>
                             </ul>
 
-                            <h2>8. Lyra and other services</h2>
+                            <h2>8. {{ site.app_name }} and other services</h2>
                             <p>
-                                The Lyra app, its name, logo and design, and the software behind them belong to Bit
+                                The {{ site.app_name }} app, its name, logo and design, and the software behind them belong to Bit
                                 Umbrella. We give you
                                 a personal, non-transferable permission to use the app under these terms. Signing in
                                 with Google and buying
@@ -251,7 +205,7 @@
 
                             <h2>9. Disclaimer</h2>
                             <p>
-                                To the extent the law allows, Lyra is provided "as is" and "as available", without
+                                To the extent the law allows, {{ site.app_name }} is provided "as is" and "as available", without
                                 warranties of any kind,
                                 including that it will meet your needs, be accurate, or be uninterrupted or error-free.
                                 Some countries
@@ -284,11 +238,11 @@
 
                             <h2>12. Changes to these terms</h2>
                             <p>
-                                We may update these terms as Lyra changes. We'll post the new version here with a new
+                                We may update these terms as {{ site.app_name }} changes. We'll post the new version here with a new
                                 effective date, and
                                 for significant changes we'll let you know in the app before they take effect. If you
-                                keep using Lyra after
-                                the changes take effect, you accept the new terms. If you don't, you can stop using Lyra
+                                keep using {{ site.app_name }} after
+                                the changes take effect, you accept the new terms. If you don't, you can stop using {{ site.app_name }}
                                 and delete your
                                 data.
                             </p>
@@ -298,7 +252,7 @@
                                 Bit Umbrella<br>
                                 A751 Indra Vihar, Near Opera Hospital, Kota, Rajasthan, India 324005<br>
                                 Email: <a
-                                    href="mailto:reachus@bitumbrella.tech?subject=Lyra%20terms">reachus@bitumbrella.tech</a>
+                                    href="mailto:reachus@bitumbrella.tech?subject={{ site.app_name | url_encode }}%20terms">reachus@bitumbrella.tech</a>
                             </p>
                         </main>
                     </article>

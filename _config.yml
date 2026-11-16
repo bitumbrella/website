@@ -1,0 +1,23 @@
+# Site-wide settings, read by GitHub Pages (Jekyll) when the site is published.
+# Use these in any page that starts with a front matter block (two lines of ---):
+#   {{ site.app_name }}                 -> E.K.O.V.A
+#   {{ site.app_name | url_encode }}    -> for use inside URLs (e.g. mailto subjects)
+
+app_name: "E.K.O.V.A"
+
+# Album / folder name the app creates on the user's phone (mentioned in the privacy policy)
+folder_name: "EKOVA"
+
+# Folder under /products that holds the app's pages
+app_slug: "ekova"
+
+# Pages listed under the app in the Products menu
+app_pages:
+  - file: about.html
+    label: About
+  - file: privacy-policy.html
+    label: Privacy Policy
+  - file: terms-of-service.html
+    label: Terms of Service
+  - file: delete-my-data.html
+    label: Delete My Data

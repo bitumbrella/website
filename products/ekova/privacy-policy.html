@@ -1,3 +1,6 @@
+---
+root: ../../
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Lyra Privacy Policy - Bit Umbrella">
+    <meta name="description" content="{{ site.app_name }} Privacy Policy - Bit Umbrella">
     <link rel="stylesheet" href="../../css/bitumbrella.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#131e1d">
-    <title>Lyra Privacy Policy - Bit Umbrella</title>
+    <title>{{ site.app_name }} Privacy Policy - Bit Umbrella</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
@@ -159,70 +162,21 @@
 
 <body>
     <div class="bu">
-        <header class="bu-header bu-header--solid">
-            <div class="buu-wrap buu-wrap--header">
-                <div class="bu-header-inner">
-                    <a class="bu-logoBlock" href="../../index.html">
-                        <img src="../../img/UmbrellaLogo.svg" alt="Bit Umbrella Logo" class="bu-logoBlock-logo">
-                    </a>
-                    <h1 class="bu-header-name">Bit Umbrella</h1>
-                    <div class="bu-navigationWrap">
-                        <nav class="bu-navigation">
-                            <a class="bu-navigation-link bu-navigation-link--home" href="../../index.html">Home</a>
-                            <a class="bu-navigation-link bu-navigation-link--doctrine"
-                                href="../../index.html#doctrine">Doctrine</a>
-                            <a class="bu-navigation-link bu-navigation-link--services"
-                                href="../../index.html#services">Services</a>
-                            <a class="bu-navigation-link bu-navigation-link--leadership"
-                                href="../../index.html#leadership">Leadership</a>
-                            <div class="bu-navigation-dropdown">
-                                <button class="buu-button bu-navigation-link bu-navigation-dropdownToggle"
-                                    aria-expanded="false" aria-controls="productsMenu">Products<span
-                                        class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                <div class="bu-navigation-submenu bu-navigation-submenu--top" id="productsMenu">
-                                    <div class="bu-navigation-dropdown">
-                                        <button class="buu-button bu-navigation-subToggle bu-navigation-dropdownToggle"
-                                            aria-expanded="false" aria-controls="lyraMenu">Lyra<span
-                                                class="bu-navigation-caret" aria-hidden="true"></span></button>
-                                        <div class="bu-navigation-submenu bu-navigation-submenu--nested" id="lyraMenu">
-                                            <a class="bu-navigation-sublink" href="about.html">About</a>
-                                            <a class="bu-navigation-sublink" href="privacy-policy.html"
-                                                aria-current="page">Privacy Policy</a>
-                                            <a class="bu-navigation-sublink" href="terms-of-service.html">Terms of
-                                                Service</a>
-                                            <a class="bu-navigation-sublink" href="delete-my-data.html">Delete My
-                                                Data</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="bu-navigation-link bu-navigation-link--contactUs"
-                                href="../../index.html#contactUs">Contact Us</a>
-                        </nav>
-                        <button class="buu-button bu-navigation-toggle" aria-label="Open Navigation">
-                            <svg class="bu-navigation-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor"
-                                    d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
+{% include header.html %}
         <main class="bu-main">
             <section class="bu-page">
                 <div class="buu-wrap">
                     <article class="bu-page-content">
                         <main class="wrap">
-                            <h1>Lyra Privacy policy</h1>
+                            <h1>{{ site.app_name }} Privacy policy</h1>
                             <p class="muted">Effective December 4, 2026</p>
 
                             <p>
-                                Lyra is an app by Bit Umbrella ("we", "us") that helps you capture, describe and find
+                                {{ site.app_name }} is an app by Bit Umbrella ("we", "us") that helps you capture, describe and find
                                 everyday things in
                                 your life -
                                 documents, receipts, everyday items - from a photo or a document. This policy explains
-                                what information Lyra
+                                what information {{ site.app_name }}
                                 collects, how
                                 it's
                                 used and shared, and the choices you have.
@@ -231,7 +185,7 @@
                             <div class="summary">
                                 <strong>In short</strong>
                                 <ul>
-                                    <li>We collect what you give Lyra - photos, documents, notes, voice notes, questions
+                                    <li>We collect what you give {{ site.app_name }} - photos, documents, notes, voice notes, questions
                                         - to provide its
                                         features, and nothing more.</li>
                                     <li>We don't sell your information, show ads, or use advertising or analytics
@@ -249,7 +203,7 @@
 
                             <h3>Your Google sign-in</h3>
                             <p>
-                                You sign in to Lyra with Google. Lyra doesn't create a separate account or password.
+                                You sign in to {{ site.app_name }} with Google. {{ site.app_name }} doesn't create a separate account or password.
                                 From Google we receive
                                 your
                                 <strong>name, email address and profile picture</strong>. Your email address is stored
@@ -305,7 +259,7 @@
                                     labelled details come from their rows, on our servers. See section 3 for these
                                     services.
                                 </li>
-                                <li>Lyra refuses Word and Excel files with macros, password-protected files, and older
+                                <li>{{ site.app_name }} refuses Word and Excel files with macros, password-protected files, and older
                                     .doc and .xls files,
                                     and doesn't run anything in a document.</li>
                             </ul>
@@ -316,10 +270,10 @@
                                 <li><strong>Voice notes</strong> (audio recordings up to 10 seconds) you record for an
                                     Asset, and their text
                                     transcriptions.</li>
-                                <li><strong>Ask Lyra</strong>: when you ask a question by voice, the recording is sent
+                                <li><strong>Ask {{ site.app_name }}</strong>: when you ask a question by voice, the recording is sent
                                     to be transcribed and
                                     is not stored.
-                                    Your question and Lyra's answer are processed to produce the answer (and to read it
+                                    Your question and {{ site.app_name }}'s answer are processed to produce the answer (and to read it
                                     aloud) and are not
                                     stored,
                                     unless you report the answer (see "Feedback and reports").</li>
@@ -327,11 +281,11 @@
 
                             <h3>Location</h3>
                             <p>
-                                With your permission, when you create an Asset with the camera, Lyra records the
+                                With your permission, when you create an Asset with the camera, {{ site.app_name }} records the
                                 <strong>precise
                                     location</strong> where the
                                 photo was taken and looks up its street address, so you can later find things by place.
-                                Lyra only uses
+                                {{ site.app_name }} only uses
                                 location while you're
                                 using the app, never in the background. If you decline, Assets are created without a
                                 location. Photos picked
@@ -344,7 +298,7 @@
                                 <li><strong>Feedback</strong> you send: its type, an optional rating, your message, an
                                     optional screenshot,
                                     and your email.</li>
-                                <li><strong>Reported AI answers</strong>: if you report an Ask Lyra answer, we receive
+                                <li><strong>Reported AI answers</strong>: if you report an Ask {{ site.app_name }} answer, we receive
                                     your question, the
                                     answer, the reason you
                                     chose, any comment you add, and references to the Assets the answer was based on -
@@ -358,12 +312,12 @@
                                 settings (such as your
                                 data region, whether to keep photos on this phone, which extracted details to show, and
                                 your answers to
-                                Lyra's permission questions), your recent searches, cached images, and links to photos
+                                {{ site.app_name }}'s permission questions), your recent searches, cached images, and links to photos
                                 in your gallery.
                                 If you choose
-                                <em>Keep photos on this phone</em>, photos you take are saved to a "Lyra" album in your
+                                <em>Keep photos on this phone</em>, photos you take are saved to an "{{ site.folder_name }}" album in your
                                 phone's gallery.
-                                A document you download is saved to your phone's Downloads/Lyra folder; one you open is
+                                A document you download is saved to your phone's Downloads/{{ site.folder_name }} folder; one you open is
                                 copied to the app's
                                 cache and opened in an app on your phone that you choose. This information stays
                                 on your device.
@@ -373,25 +327,25 @@
                             <p>
                                 Our servers keep operational logs (request timestamps, HTTP methods, IP addresses,
                                 routing paths, and server
-                                performance metrics) and error details - to keep Lyra secure and working. They don't
+                                performance metrics) and error details - to keep {{ site.app_name }} secure and working. They don't
                                 include the content of
                                 your photos, documents, notes, voice notes, searches or questions.
                             </p>
 
                             <h3>Usage counts</h3>
                             <p>
-                                We count how much you use Lyra's features: how many photos and document pages you add,
+                                We count how much you use {{ site.app_name }}'s features: how many photos and document pages you add,
                                 how many questions
                                 you ask, how many seconds of voice are transcribed, how many characters are read aloud,
                                 and how many scans
                                 you run, each with its date. We use these counts to apply your plan's monthly allowance
                                 and to understand
-                                what Lyra costs to run. We also count, per day, how many searches and questions you run
+                                what {{ site.app_name }} costs to run. We also count, per day, how many searches and questions you run
                                 and how many of them
-                                found nothing, and how often you reach one of Lyra's limits (your plan's allowance, too
+                                found nothing, and how often you reach one of {{ site.app_name }}'s limits (your plan's allowance, too
                                 many requests in a
                                 minute, a file or recording that's too large). We keep your plan, when you first and
-                                last used Lyra, and
+                                last used {{ site.app_name }}, and
                                 the version of the app you last used. We use these to see whether search works well,
                                 whether a limit is
                                 too tight, and who needs to update the app.
@@ -401,25 +355,25 @@
 
                             <h3>What we don't collect</h3>
                             <p>
-                                Lyra doesn't access your contacts, messages or other apps' data, doesn't track you
+                                {{ site.app_name }} doesn't access your contacts, messages or other apps' data, doesn't track you
                                 across apps or websites,
                                 and contains no
-                                advertising or analytics SDKs. Lyra only reads photos you explicitly choose (through
+                                advertising or analytics SDKs. {{ site.app_name }} only reads photos you explicitly choose (through
                                 Android's photo picker)
                                 or take with it, and documents you explicitly choose (through Android's file picker).
                             </p>
 
                             <h2>2. How we use your information</h2>
                             <ul>
-                                <li>To provide Lyra's features: storing and showing your Assets, describing photos,
+                                <li>To provide {{ site.app_name }}'s features: storing and showing your Assets, describing photos,
                                     reading documents,
                                     finding information by scan and location,
                                     transcribing voice, answering your questions, and reading answers aloud.</li>
                                 <li>To store your data in the region you chose and keep it available across your
                                     devices.</li>
-                                <li>To review feedback and reported AI answers and improve Lyra.</li>
-                                <li>To keep Lyra secure, prevent abuse, and fix problems.</li>
-                                <li>To apply your plan's allowances and understand what Lyra costs to run (usage
+                                <li>To review feedback and reported AI answers and improve {{ site.app_name }}.</li>
+                                <li>To keep {{ site.app_name }} secure, prevent abuse, and fix problems.</li>
+                                <li>To apply your plan's allowances and understand what {{ site.app_name }} costs to run (usage
                                     counts).</li>
                             </ul>
                             <p>We don't sell your information, use it for advertising, or use your photos or notes to
@@ -428,14 +382,14 @@
 
                             <h2>3. Service providers we share information with</h2>
                             <p>
-                                To provide Lyra, we use the following providers. They process your information only to
+                                To provide {{ site.app_name }}, we use the following providers. They process your information only to
                                 perform their service
-                                for Lyra.
+                                for {{ site.app_name }}.
                             </p>
                             <table>
                                 <tr>
                                     <th>Provider</th>
-                                    <th>What it does for Lyra</th>
+                                    <th>What it does for {{ site.app_name }}</th>
                                     <th>Information involved</th>
                                 </tr>
                                 <tr>
@@ -449,7 +403,7 @@
                                         scanned documents,
                                         extracting labelled details (such as a policy number or dates) from photos and
                                         documents,
-                                        transcribing voice notes and spoken questions, generating Ask Lyra's answers,
+                                        transcribing voice notes and spoken questions, generating Ask {{ site.app_name }}'s answers,
                                         creating
                                         embeddings</td>
                                     <td>Photos; scanned documents; a PDF's first-page image; the text read from photos
@@ -467,11 +421,11 @@
                                 <tr>
                                     <td>Lemonfox</td>
                                     <td>Text-to-speech</td>
-                                    <td>Ask Lyra's answers, to read them aloud</td>
+                                    <td>Ask {{ site.app_name }}'s answers, to read them aloud</td>
                                 </tr>
                                 <tr>
                                     <td>Northflank</td>
-                                    <td>Hosting Lyra's servers and its database</td>
+                                    <td>Hosting {{ site.app_name }}'s servers and its database</td>
                                     <td>Stored in the database: your email, Asset details (including the text and
                                         details extracted from
                                         photos and documents), notes, transcriptions, locations, feedback and usage
@@ -483,16 +437,16 @@
                             <p>
                                 We may also disclose information if required by law, or to protect the rights and safety
                                 of our users or
-                                others. If Lyra is ever
+                                others. If {{ site.app_name }} is ever
                                 transferred to another owner, your information would transfer under this policy.
                             </p>
 
                             <h2>4. Where your information is stored</h2>
                             <p>
-                                When you first sign in to the Lyra app, you choose where your data is stored -
+                                When you first sign in to the {{ site.app_name }} app, you choose where your data is stored -
                                 <strong>Asia</strong> or
                                 <strong>rest of the world</strong> - and that choice can't be changed from the app
-                                later. What Lyra
+                                later. What {{ site.app_name }}
                                 stores about you is kept in that region:
                             </p>
                             <table>
@@ -529,7 +483,7 @@
                                 stored in your chosen region.
                             </p>
                             <p>
-                                Lemonfox, which reads Ask Lyra's answers aloud, runs its service on servers in several
+                                Lemonfox, which reads Ask {{ site.app_name }}'s answers aloud, runs its service on servers in several
                                 countries, so an
                                 answer may be processed outside your region. Lemonfox doesn't keep what it receives: the
                                 text of an answer
@@ -545,14 +499,14 @@
                                     files.</li>
                                 <li><strong>Delete my data</strong>: in the Android app (profile menu &rarr; Delete my
                                     data) or at
-                                    <a href="delete-my-data.html">bitumbrella.tech/lyra/delete-my-data.html</a>, you can
+                                    <a href="delete-my-data.html">bitumbrella.tech/app/delete-my-data.html</a>, you can
                                     permanently delete
                                     all your Assets and
-                                    their files on every Lyra server, and any AI answers you've reported. Deletion is
+                                    their files on every {{ site.app_name }} server, and any AI answers you've reported. Deletion is
                                     immediate.
                                 </li>
                                 <li><strong>Feedback</strong>, including any screenshot you attached, is kept to help us
-                                    improve Lyra.
+                                    improve {{ site.app_name }}.
                                     When you delete your data, your email is removed from it.</li>
                                 <li><strong>Usage counts</strong> are kept when you delete your data, so that deleting
                                     doesn't reset your
@@ -581,10 +535,10 @@
                                 </li>
                                 <li><strong>Delete</strong> individual Assets, or all your data, as described above.
                                 </li>
-                                <li><strong>Permissions</strong>: microphone (voice notes and Ask Lyra) and location
+                                <li><strong>Permissions</strong>: microphone (voice notes and Ask {{ site.app_name }}) and location
                                     (camera captures) are
                                     only requested when
-                                    needed and can be turned off in your phone's settings. Lyra keeps working without
+                                    needed and can be turned off in your phone's settings. {{ site.app_name }} keeps working without
                                     them.</li>
                                 <li><strong>Keep photos on this phone</strong> can be switched on or off from the
                                     profile menu.</li>
@@ -610,7 +564,7 @@
                                 download them are temporary and only issued to their owner. A small number of Bit
                                 Umbrella team members
                                 can see account emails, usage counts, feedback and reported answers, to run and support
-                                Lyra. Our admin
+                                {{ site.app_name }}. Our admin
                                 tools don't show your Assets, photos, documents or notes. No method of storage or
                                 transmission is
                                 completely secure, but we
@@ -619,20 +573,20 @@
 
                             <h2>8. Children</h2>
                             <p>
-                                Lyra is a general-audience app. We don't ask for your age, and we don't design or market
-                                Lyra for
+                                {{ site.app_name }} is a general-audience app. We don't ask for your age, and we don't design or market
+                                {{ site.app_name }} for
                                 children. If you're under the age at which you can agree to the use of your data where
                                 you live (for
                                 example 18 in India, 13 in the United States, and between 13 and 16 in the UK and EU),
-                                please use Lyra
+                                please use {{ site.app_name }}
                                 only with a parent or guardian's permission. If you're a parent or guardian and believe
                                 your child has
-                                used Lyra without your permission, contact us and we'll delete their data.
+                                used {{ site.app_name }} without your permission, contact us and we'll delete their data.
                             </p>
 
                             <h2>9. Changes to this policy</h2>
                             <p>
-                                We may update this policy as Lyra changes. We'll post the new version here with a new
+                                We may update this policy as {{ site.app_name }} changes. We'll post the new version here with a new
                                 effective date, and
                                 for significant changes
                                 we'll let you know in the app.
@@ -643,7 +597,7 @@
                                 Bit Umbrella<br>
                                 A751 Indra Vihar, Near Opera Hospital, Kota, Rajasthan, India 324005<br>
                                 Email: <a
-                                    href="mailto:reachus@bitumbrella.tech?subject=Lyra%20privacy">reachus@bitumbrella.tech</a>
+                                    href="mailto:reachus@bitumbrella.tech?subject={{ site.app_name | url_encode }}%20privacy">reachus@bitumbrella.tech</a>
                             </p>
                         </main>
                     </article>
